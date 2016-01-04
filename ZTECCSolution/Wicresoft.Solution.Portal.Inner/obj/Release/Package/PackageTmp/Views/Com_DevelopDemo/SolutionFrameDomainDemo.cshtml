@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Domain";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>Domain，Core下为适配、Cookie等通用类，DI下BootStrap为Controller注册辅助类，ControllerRegistry为控制器注册IOC配置，ServiceResolverAdapter为IOC初始化等</li>
+            <li><span style="color: red;">2.&nbsp;</span>Utils，枚举、常量在Const下，辅助通用方法在Helpers下，Dynamic为linq排序所需，Log.cs为NLog记录日志通用方法</li>
+            <li><span style="color: red;">3.&nbsp;</span>Log.cs，记录日志采用NLog，此处配置，Inner，Outer，PoartalAPI调用，发布后在bin文件下有个NLog.config的配置生效，日志记录目前采用text和sql两种方式</li>
+            <li><span style="color: red;">4.&nbsp;</span>不依赖本项目内其他层</li>
+        </ul>
+    </div>
+</div>

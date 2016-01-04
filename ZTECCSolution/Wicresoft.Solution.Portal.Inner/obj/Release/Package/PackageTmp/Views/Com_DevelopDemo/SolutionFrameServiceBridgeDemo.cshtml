@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "ServiceBridge";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>Core下HttpRequestWrapper，核心，封装参数为Http请求，加密报文</li>
+            <li><span style="color: red;">2.&nbsp;</span>HttpGet，HttpPost与mvc不一样，此处为Http请求，非mvc的对应请求</li>
+            <li><span style="color: red;">3.&nbsp;</span>HttpGet，简单类型参数传递(int,string等)，参照Com_DevelopDemoServiceBridge下GetOneFirstMenuByParentId</li>
+            <li><span style="color: red;">4.&nbsp;</span>HttpGet，复杂类型参数传递(Model)</li>
+            <li><span style="color: red;">5.&nbsp;</span>HttpGet，特殊类型参数传递(Model带时间的处理，需格式化)</li>
+            <li><span style="color: red;">6.&nbsp;</span>HttpGet，简单类型参数传递(int,string等)</li>
+            <li><span style="color: red;">7.&nbsp;</span>HttpGet，复杂类型参数传递(Model)</li>
+            <li><span style="color: red;">8.&nbsp;</span>HttpGet，特殊类型参数传递(Model带时间的处理，需格式化)</li>
+            <li><span style="color: red;">9.&nbsp;</span>参数类型和名称必须与PortalAPI中一致，否则报500</li>
+            <li><span style="color: red;">10.&nbsp;</span>PortalAPI中返回类型必须用ResponseData&lt;T&gt;，T为ServiceBridge中返回值类型</li>
+            <li><span style="color: red;">11.&nbsp;</span>带时间的Model需要先格式化,可参照Com_UploadFileServiceBridge下AddUploadFile,PortalAPI中反序列化可参照Com_UploadFileServiceController下AddUploadFile</li>
+            <li><span style="color: red;">12.&nbsp;</span>参数为自定义model的List等，需要先转化为json格式数据，而后封装请求，PortalAPI中反序列化同上</li>
+            <li><span style="color: red;">13.&nbsp;</span>数据Json序列化和反序列化可调用Domain下Utils下DataJsonHelper的对应方法</li>
+            <li><span style="color: red;">14.&nbsp;</span>分页返回参数写法，参照Com_DevelopDemoServiceBridge下GetMenuListByParentIdAndPage</li>
+            <li><span style="color: red;">15.&nbsp;</span>带分页的数据，需要在PortalModel中自定义ModelList类，可参照Com_DevelopDemoServiceBridge下GetMenuListByParentIdAndPage，PortalAPI中需要进行组装，可参照Com_DevelopDemoServiceController下GetMenuListByParentIdAndPage</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "角色管理";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/admin.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div style="height: 47px; background: white;">
+        <div class="dataOperation">
+            @if (ViewBag.AddPermission)
+            {
+                <input type="button" class="doButton button" value="添加角色"
+                    data-wrapper-id="bgWrapperOne" data-detail-link="/Sys_Role/AddGroup/'" />
+            }
+        </div>
+    </div>
+    <div class="dataTableList">
+        <table id="groupListDataTbl" style="width: 100%">
+            <thead>
+                <tr>
+                    <th data-options="field:'Name',width:35,formatter:NameFormatter">角色名称</th>
+                    <th data-options="field:'Description',width:35">角色说明</th>
+                    <th data-options="field:'ModifyBy',width:20">操作人</th>
+                    <th data-options="field:'ModifyTime',width:45,formatter:DateTimeFormatter">操作时间</th>
+                    <th data-options="field:'Operate',width:60,formatter:OperateFormatter">操作</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>

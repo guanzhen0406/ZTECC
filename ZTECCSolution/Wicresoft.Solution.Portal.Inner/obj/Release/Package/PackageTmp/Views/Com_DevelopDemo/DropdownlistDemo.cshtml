@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "下拉控件";
+    ViewBag.ActiveMenu = "基础示例";
+    ViewBag.ActiveSecondMenu = "下拉控件";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="dataOperationWrapper">
+        <div class="dataOperation">
+            <span class="doText">汇总报表范围：</span>
+            <div class="pullDownSelect" data-role="select" style="width: 80px;">
+                <span data-role="selectedText">季度</span>
+                <input type="hidden" value="0" data-role="selectedValue" id="reportRangeSelect" />
+                <div class="dropDownList">
+                    <div class="option" data-value="0">季度</div>
+                    <div class="option" data-value="1">半年度</div>
+                    <div class="option" data-value="2">年度</div>
+                </div>
+                <i class="icon-chevron-down"></i>
+            </div>
+            <span class="doText">年份:</span>
+            <div class="attachCalendarInput">
+                <input type="text" class=" intoTime_input doinput datePicker" date-format="yyyy" date-max="%y" readonly="readonly" id="importDate" style="width: 80px;" value="@DateTime.Now.AddYears(-1).ToString("yyyy")">
+                <i class="icon-calendar"></i>
+            </div>
+            @*季度*@
+            <div class="pullDownSelect" data-role="select" style="width: 100px;" data-for="quarterSelect">
+                <span data-role="selectedText">第一季度</span>
+                <input type="hidden" value="1" data-role="selectedValue" id="quarterSelect" />
+                <div class="dropDownList">
+                    <div class="option" data-value="1">第一季度</div>
+                    <div class="option" data-value="2">第二季度</div>
+                    <div class="option" data-value="3">第三季度</div>
+                    <div class="option" data-value="4">第四季度</div>
+                </div>
+                <i class="icon-chevron-down"></i>
+            </div>
+            @*半年度*@
+            <div class="pullDownSelect" data-role="select" style="width: 100px; display: none;" data-for="halfYearSelect">
+                <span data-role="selectedText">上半年</span>
+                <input type="hidden" value="0" data-role="selectedValue" id="halfYearSelect" />
+                <div class="dropDownList">
+                    <div class="option" data-value="0">上半年</div>
+                    <div class="option" data-value="1">下半年</div>
+                </div>
+                <i class="icon-chevron-down"></i>
+            </div>
+            <div class="pullDownSelect" data-role="select" style="width: 100px; display: none;" data-for="isGoodHotelSelect">
+                <span data-role="selectedText">是否良性</span>
+                <input type="hidden" value="" data-role="selectedValue" id="isGoodHotelSelect" />
+                <div class="dropDownList">
+                    <div class="option" data-value="">全部</div>
+                    <div class="option" data-value="1">良性</div>
+                    <div class="option" data-value="0">非良性</div>
+                </div>
+                <i class="icon-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 10px;">
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>data-role="select"：表示这是个下拉框</li>
+            <li><span style="color: red;">2.&nbsp;</span>data-role="selectedText"：存放选中项的文本</li>
+            <li><span style="color: red;">3.&nbsp;</span>data-role="selectedValue"：存放选中项的值</li>
+            <li><span style="color: red;">4.&nbsp;</span>&lt;div class="dropDownList"&gt;：等同于&lt;select&gt;
+            </li>
+            <li><span style="color: red;">5.&nbsp;</span>&lt;div class='option' data-value='1'&gt;半年&lt;/div&gt;：等同于&lt;option value='1'&gt;半年&lt;/option&gt;
+            </li>
+            <li><span style="color: red;">6.&nbsp;</span>utility.js中注册控件，搜索关键字'下拉控件注册'</li>
+            <li><span style="color: red;">7.&nbsp;</span>developDemo.js中注册自定义事件，搜索关键字'下拉控件示例--范围切换'</li>
+        </ul>
+    </div>
+</div>

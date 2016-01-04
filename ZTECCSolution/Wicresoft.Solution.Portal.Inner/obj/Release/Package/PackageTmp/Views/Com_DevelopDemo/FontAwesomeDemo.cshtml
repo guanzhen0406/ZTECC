@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "小图标Font Awesome (css)";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+        <br />
+        <span>月亮小图标：</span><i class="icon-moon"></i><br />
+        <span>水果小图标：</span><i class="icon-apple"></i><br />
+        <a href="http://fortawesome.github.io/Font-Awesome/3.2.1/icons/" style="text-decoration: underline; color: blue;" target="_blank">http://fortawesome.github.io/Font-Awesome/3.2.1/icons/</a>
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>Styles下font-awesome.css</li>
+            <li><span style="color: red;">2.&nbsp;</span>class="icon-calendar"，表示日历小图标，Com_DevelopDemo下DatePickerDemo.cshtml中搜索</li>
+            <li><span style="color: red;">3.&nbsp;</span>class='icon-remove'，表示移除小图标，Sys_Menu下AddFunction.cshtml中搜索</li>
+            <li><span style="color: red;">4.&nbsp;</span>使用css定义的图标实现，不需要切图，具体的样式对应的class名参照 http://fortawesome.github.io/Font-Awesome/3.2.1/icons/</li>
+        </ul>
+    </div>
+</div>

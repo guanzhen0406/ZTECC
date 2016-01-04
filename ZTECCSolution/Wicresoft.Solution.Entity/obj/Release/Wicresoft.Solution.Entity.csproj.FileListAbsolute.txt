@@ -1,0 +1,9 @@
+D:\Develop\QSHRSelfHelpPlatformSolution\Src\SMG_EAMSolution\Wicresoft.Solution.Entity\bin\Release\Wicresoft.Solution.Entity.dll.config
+D:\Develop\QSHRSelfHelpPlatformSolution\Src\SMG_EAMSolution\Wicresoft.Solution.Entity\bin\Release\Wicresoft.Solution.Entity.dll
+D:\Develop\QSHRSelfHelpPlatformSolution\Src\SMG_EAMSolution\Wicresoft.Solution.Entity\bin\Release\Wicresoft.Solution.Entity.pdb
+D:\Develop\QSHRSelfHelpPlatformSolution\Src\SMG_EAMSolution\Wicresoft.Solution.Entity\bin\Release\EntityFramework.dll
+D:\Develop\QSHRSelfHelpPlatformSolution\Src\SMG_EAMSolution\Wicresoft.Solution.Entity\bin\Release\EntityFramework.xml
+D:\Develop\QSHRSelfHelpPlatformSolution\Src\SMG_EAMSolution\Wicresoft.Solution.Entity\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\Develop\QSHRSelfHelpPlatformSolution\Src\SMG_EAMSolution\Wicresoft.Solution.Entity\obj\Release\Wicresoft.Solution.Entity.csprojResolveAssemblyReference.cache
+D:\Develop\QSHRSelfHelpPlatformSolution\Src\SMG_EAMSolution\Wicresoft.Solution.Entity\obj\Release\Wicresoft.Solution.Entity.dll
+D:\Develop\QSHRSelfHelpPlatformSolution\Src\SMG_EAMSolution\Wicresoft.Solution.Entity\obj\Release\Wicresoft.Solution.Entity.pdb

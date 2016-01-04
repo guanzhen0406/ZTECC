@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "菜单--设置";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_iframe.css" />
+    <script type="text/javascript" src="~/Scripts/libs/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/Scripts/admin.js"></script>
+}
+
+<form id="detailForm"></form>
+<input type="hidden" value="@ViewBag.groupId" id="groupId"/>
+<div class="header">@ViewBag.Title<i class="icon-remove" data-close="bgWrapperOne"></i></div>
+<div style="width: 100%; height: auto; min-height: 100px; text-align: left;">
+    <ul class="easyui-tree" data-options="animate:true,data:@ViewBag.JsonMenuData" id="menuTree" checkbox="true">
+    </ul>
+</div>
+<div class="operate">
+    <input type="button" class="button searchButton" value="保存" onclick="AutoSubmitData();">
+</div>

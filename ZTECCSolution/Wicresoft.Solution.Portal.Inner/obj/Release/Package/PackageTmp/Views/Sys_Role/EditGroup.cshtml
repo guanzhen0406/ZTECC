@@ -1,0 +1,31 @@
+﻿@using Wicresoft.Solution.PortalModel
+@model Sys_Role_Model
+@{
+    ViewBag.Title = "角色--编辑";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_iframe.css" />
+    <script type="text/javascript" src="~/Scripts/libs/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/Scripts/admin.js"></script>
+}
+
+<input type="hidden" value="@Model.ID" id="ID"/>
+<div class="header">@ViewBag.Title<i class="icon-remove" data-close="bgWrapperOne"></i></div>
+<form id="detailForm">
+    <div class="inputArea" style="margin-top: 15px;">
+        <div class="column" style="width: 380px;">
+            <div class="name"><span style='color: red;'>*</span>角色名称:</div>
+            <input type="text" value="@Model.Name" style="height: 25px; width: 168px;" id="Name" name="Name"/>
+        </div>
+        <div class="line">
+            <div class="name">角色说明:</div>
+            <textarea id="Description" name="Description" style="width: 568px;">@Model.Description</textarea>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+</form>
+<div class="operate">
+    <input type="button" class="button searchButton" value="保存" onclick="AutoSubmitData();">
+</div>

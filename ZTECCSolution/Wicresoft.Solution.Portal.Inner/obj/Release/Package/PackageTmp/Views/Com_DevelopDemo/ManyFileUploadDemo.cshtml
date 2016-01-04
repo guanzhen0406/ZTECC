@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "多文件上传";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <style>
+        .upArea {
+            padding-left: 20px;
+            width: 96%;
+        }
+
+        .upTypeText {
+            width: 185px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .button {
+            width: 120px;
+            line-height: 31px;
+            height: 35px;
+            margin-left: auto;
+        }
+
+        .downlosdTypeLim {
+            width: 360px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            line-height: 50px;
+            vertical-align: middle;
+        }
+
+            .downlosdTypeLim a {
+                text-decoration: underline;
+                color: blue;
+            }
+
+        .alink {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            line-height: 50px;
+            vertical-align: middle;
+            text-decoration: underline;
+            color: blue;
+            margin-right: 20px;
+            width: 160px;
+        }
+    </style>
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<input type="hidden" value="@ViewBag.fileType" id="fileType" />
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="upArea">
+        <div class="upBox">
+            <div class="upTypeText"><span style="color: red;">*</span>附件示例一：</div>
+            <div id="file_up1" style="display: inline-block; width: 520px;">
+                <div id="fileUpload" style="display: inline-block; vertical-align: middle; width: 485px;">
+                    <div class="downlosdTypeLim"><span style='color: red;'>*</span>支持10M以下文件,xls,xlsx格式</div>
+                    <input type="hidden" id="attachmentPath" name="attachmentPath" />
+                    <input type="file" id="up1" class="searchButton button" name="up1" data-loadsuccess="loadFileList" data-filetype="*.xlsx;*.xls;" />
+                    <input type="hidden" id="uploadFileId" name="uploadFileId" value="@Guid.NewGuid()"/>
+                </div>
+                <div id="fileList" style="display: none; vertical-align: middle; width: 485px;" class="fileList">
+                    <div class="downlosdTypeLim"><a href="#">文件名</a></div>
+                    <input type="button" class="searchButton button  deleteFileListCommon" value="删除" />
+                </div>
+            </div>
+            <a class="alink" href="/Com_UploadFile/ExportFileToResponse?saveName=@(HttpUtility.UrlEncode("/DownloadFiles/风险提示-1内控主管经理.xlsx"))" target="_blank">内控主管经理模板下载</a>
+        </div>
+        <div class="upBox">
+            <div class="upTypeText"><span style="color: red;">*</span>附件示例二：</div>
+            <div id="file_up2" style="display: inline-block; width: 520px;">
+                <div id="fileUpload" style="display: inline-block; vertical-align: middle;">
+                    <div class="downlosdTypeLim"><span style='color: red;'>*</span>支持10M以下文件,xls,xlsx格式</div>
+                    <input type="hidden" id="attachmentPath" name="attachmentPath" />
+                    <input type="file" id="up2" class="searchButton button" name="up2" data-filetype="*.xlsx;*.xls;" />
+                    <input type="hidden" id="uploadFileId" name="uploadFileId" value="@Guid.NewGuid()"/>
+                </div>
+                <div id="fileList" style="display: none; vertical-align: middle;" class="fileList">
+                    <div class="downlosdTypeLim"><a href="#">文件名</a></div>
+                    <input type="button" class="searchButton button  deleteFileListCommon" id="deleteFileListCommon" value="删除" />
+                </div>
+            </div>
+            <a class="alink" href="/Com_UploadFile/ExportFileToResponse?saveName=@(HttpUtility.UrlEncode("/DownloadFiles/风险提示-2应收账款风险.xlsx"))" target="_blank">应收账款风险模板下载</a>
+        </div>
+        <div class="upBox" style="margin-bottom: 20px;">
+            <div class="upTypeText"><span style="color: red;">*</span>附件示例三：</div>
+            <div id="file_up3" style="display: inline-block; width: 520px;">
+                <div id="fileUpload" style="display: inline-block; vertical-align: middle;">
+                    <div class="downlosdTypeLim"><span style='color: red;'>*</span>支持10M以下文件,xls,xlsx格式</div>
+                    <input type="hidden" id="attachmentPath" name="attachmentPath" />
+                    <input type="file" id="up3" class="searchButton button" name="up3" data-filetype="*.xlsx;*.xls;" />
+                    <input type="hidden" id="uploadFileId" name="uploadFileId" value="@Guid.NewGuid()"/>
+                </div>
+                <div id="fileList" style="display: none; vertical-align: middle;" class="fileList">
+                    <div class="downlosdTypeLim"><span>&nbsp;</span><a href="#">文件名</a></div>
+                    <input type="button" class="searchButton button  deleteFileListCommon" id="deleteFileListCommon" value="删除" />
+                </div>
+            </div>
+            <a class="alink" href="/Com_UploadFile/ExportFileToResponse?saveName=@(HttpUtility.UrlEncode("/DownloadFiles/风险提示-3财务风险.xlsx"))" target="_blank">财务风险模板下载</a>
+        </div>
+    </div>
+    <div style="margin-left: 10px;">
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>指定个数的附件上传，可参照此示例</li>
+            <li><span style="color: red;">2.&nbsp;</span>动态个数的附件上传，可参照动态多文件上传示例</li>
+            <li><span style="color: red;">3.&nbsp;</span>要点，各自的guid，可复用</li>
+        </ul>
+    </div>
+</div>

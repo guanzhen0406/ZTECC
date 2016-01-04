@@ -1,0 +1,188 @@
+﻿[data-role="main"] {
+    width: auto;
+    background-color: white;
+}
+
+.dataTableDate {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.operate {
+    text-align: center;
+    height: 68px;
+    line-height: 68px;
+}
+
+.inputArea {
+    font-size: 15px;
+    background-color: white;
+}
+
+    .inputArea > div.column,
+    .inputArea > div.line {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        margin: 3px 2%;
+    }
+
+    .inputArea > div.line {
+        width: 96%;
+        height: auto;
+    }
+
+#AppInfo_input.inputArea > div.line {
+    margin: 6px 1px;
+}
+
+.inputArea > div.column {
+    width: 286px;
+}
+
+#AppInfo_input.inputArea > div.column {
+    width: 320px;
+    margin: 6px 1px;
+}
+
+.inputArea > div > div.name {
+    width: 100px;
+    height: 30px;
+    float: left;
+    text-align: right;
+    padding-right: 8px;
+}
+
+.inputArea > div.column input[type="text"],
+.inputArea > div.column select,
+.inputArea > div.column input[type="file"] {
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    text-indent: 5px;
+    width: 158px;
+    top:0px;
+}
+.inputArea > div.column input[type="text"].textbox-text{
+    height:20px;
+    line-height: 22px;
+    padding-top:0 !important;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+
+.inputArea > div.line textarea {
+    width: 813px;
+    height: 60px;
+    resize: none;
+    font-size: 15px;
+}
+
+.inputArea > div.line .choose {
+    width: 180px;
+    height: 25px;
+    font-size: 15px;
+}
+
+.inputArea > div.line #upload {
+    margin-right: 38px;
+}
+
+.inputArea > div.line .detail {
+    width: 807px;
+    float: left;
+    border: solid 1px #B5B5B5;
+    padding: 2px 3px;
+}
+
+    .inputArea > div.line .detail > table {
+        width: 80%;
+        padding: 0 20px;
+    }
+
+.TabInnerBorder {
+    height: 25px;
+    line-height: 25px;
+    width: 150px;
+    border: solid 1px #B5B5B5;
+    margin: 0 auto;
+}
+
+.iframe_icalendar {
+    position: relative;
+    top: 0px;
+    left: -25px;
+    color: #909090;
+}
+
+.gray {
+    background-color: #F4F4F4;
+}
+
+.hOperation_iABlock {
+    display: inline-block;
+    padding: 0px 0px 10px 50px;
+    *display: inline;
+    *zoom: 1;
+}
+
+.inquireButton {
+    height: 25px;
+    width: 65px;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.icon-remove {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+}
+
+.icon-asterisk {
+    color: red;
+    font-size: 1pt;
+}
+
+.processStamp {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid #3EB037;
+    display: inline-block;
+    margin: 15px 0px 0px 15px;
+}
+
+.stamp_position {
+    width: 94px;
+    margin-left: 3px;
+}
+
+.stamp_name {
+    height: 30px;
+    line-height: 35px;
+    border-bottom: 2px solid #3EB037;
+}
+
+.stamp_time {
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 2px solid #3EB037;
+}
+
+.stamp_status {
+    height: 30px;
+    line-height: 25px;
+}
+
+#fileUpload {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    width: 92%;
+}
+
+#deleteFileList {
+    margin-right: 38px;
+}

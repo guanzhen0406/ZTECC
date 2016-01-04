@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "PortalAPI";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>Controller实现ApiController接口，HttpGet，HttpPost与mvc不一样，此处为Http请求，非mvc的对应请求</li>
+            <li><span style="color: red;">2.&nbsp;</span>Controller添加AuthorizationFilter，用于拦截，进行安全认证</li>
+            <li><span style="color: red;">3.&nbsp;</span>安全认证原理：为防止外来入口直接调用api数据层，在HttpRequestWrapper类里封装Http请求时，在header里进行MD5加密，需要api层的AuthorizationFilter拦截进行加密认证，合法则响应，否则不予响应</li>
+            <li><span style="color: red;">4.&nbsp;</span>PortalAPI中返回类型必须用ResponseData&lt;T&gt;，T为ServiceBridge中返回值类型</li>
+            <li><span style="color: red;">5.&nbsp;</span>带时间的Model需要先格式化,可参照Com_UploadFileServiceBridge下AddUploadFile,PortalAPI中反序列化可参照Com_UploadFileServiceController下AddUploadFile</li>
+            <li><span style="color: red;">6.&nbsp;</span>参数为自定义model的List等，需要先转化为json格式数据，而后封装请求，PortalAPI中反序列化同上</li>
+            <li><span style="color: red;">7.&nbsp;</span>数据Json序列化和反序列化可调用Domain下Utils下DataJsonHelper的对应方法</li>
+            <li><span style="color: red;">8.&nbsp;</span>分页返回参数写法，参照Com_DevelopDemoServiceBridge下GetMenuListByParentIdAndPage</li>
+            <li><span style="color: red;">9.&nbsp;</span>带分页的数据，需要在PortalModel中自定义ModelList类，可参照Com_DevelopDemoServiceBridge下GetMenuListByParentIdAndPage，PortalAPI中需要进行组装，可参照Com_DevelopDemoServiceController下GetMenuListByParentIdAndPage</li>
+            <li><span style="color: red;">10.&nbsp;</span>需要注明HttpGet或HttpPost标签，根据ServiceBridge中请求类型</li>
+            <li><span style="color: red;">11.&nbsp;</span>接口方法，签名即名称，参数个数及名称必须与ServiceBridge中一致，返回值区别在于使用ResponseData包装，若无返回值，返回类型void，</li>
+            <li><span style="color: red;">12.&nbsp;</span>利用接口和IOC自动调用IBLL的接口实现BLL，需要在Domain下DI下ControllerRegistry注册</li>
+        </ul>
+    </div>
+</div>

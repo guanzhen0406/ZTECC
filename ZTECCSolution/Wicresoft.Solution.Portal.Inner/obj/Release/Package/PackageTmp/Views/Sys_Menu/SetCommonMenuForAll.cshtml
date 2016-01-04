@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "菜单--设置公共菜单";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_iframe.css" />
+    <script type="text/javascript" src="~/Scripts/libs/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/Scripts/admin.js"></script>
+}
+
+<input type="hidden" value="@ViewBag.groupId" name="groupId" id="groupId"/>
+<form id="detailForm"></form>
+<div class="header">@ViewBag.Title<i class="icon-remove"></i></div>
+<div style="width: 100%; height: auto; text-align: left;">
+    <ul class="easyui-tree" data-options="animate:true,data:@ViewBag.JsonMenuData" id="menuTree" checkbox="true">
+    </ul>
+</div>
+<div class="operate">
+    <input type="button" class="button searchButton" value="保存" onclick="AutoSubmitData();">
+</div>

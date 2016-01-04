@@ -1,0 +1,256 @@
+﻿[data-role="main"] {
+    width: auto;
+    background: white;
+}
+
+.layout_bottom {
+    margin: 6px 0;
+}
+
+.header {
+    margin-top: 0;
+}
+
+.icon-chevron-down {
+    padding-left: 5px;
+}
+.ie7_tPosition{
+    *bottom: 8px;
+}
+.intoTime_input {
+    *bottom: 5px;
+}
+
+.month_input {
+    *bottom: 5px;
+}
+
+.feeAmuont {
+    height: 35px;
+    padding: 0px 1% 0px 1%;
+    background: white;
+}
+
+.fAblock {
+    height: 30px;
+    width: 49.68%;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: aliceblue;
+}
+
+.fA_default {
+    *float: left;
+}
+
+.fA_enterAccount {
+    *float: right;
+}
+
+.tableSet {
+    padding: 10px 20px;
+}
+
+    .tableSet .gray,
+    .tableSet .white {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .tableSet.cols_two .gray,
+    .tableSet.cols_two .white {
+        width: 48%;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+    }
+
+    .tableSet .left {
+        width: 40%;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        text-align: center;
+        border-right: solid 2px white;
+    }
+
+    .tableSet .right {
+        width: 50%;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+    }
+
+        .tableSet .right input[type="text"] {
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+        }
+
+    .tableSet .gray {
+        background-color: #F4F4F4;
+    }
+
+    .tableSet .white {
+        background-color: white;
+    }
+
+.fee-operate {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.policy-operate {
+    padding: 10px 0;
+}
+
+table.star_set {
+    width: 100%;
+    line-height: 40px;
+    background-color: white;
+    text-align: center;
+}
+
+    table.star_set tr.gray {
+        background-color: #F4F4F4;
+    }
+
+    table.star_set thead {
+        background-color: #D6D6D6;
+    }
+
+        table.star_set thead th {
+            width: 50%;
+        }
+
+    table.star_set input {
+        height: 30px;
+        width: 100px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+        table.star_set input[readonly] {
+            color: #6A6A6A;
+        }
+
+    table.star_set .tip {
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+    }
+
+    table.star_set .icon_star_set {
+        height: 30px;
+        width: 120px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        vertical-align: top;
+    }
+
+.detailButton {
+    height: 25px;
+    line-height: 20px;
+    width: 50px;
+    font-size: 10pt;
+    margin-top: 2px;
+}
+
+.SysM_detailButton {
+    height: 25px;
+    line-height: 20px;
+    width: 65px;
+    text-align:center;
+    font-size: 10pt;
+    margin-top: 2px;
+}
+
+table.policyDetailList {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    table.policyDetailList tr {
+        height: 35px;
+    }
+
+        table.policyDetailList tr.gray {
+            background-color: #F5F5F5;
+        }
+
+    table.policyDetailList div.title {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 85px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+    }
+
+    table.policyDetailList input[type="text"],
+    table.policyDetailList select {
+        height: 27px;
+        font-size: 15px;
+        width: 170px;
+        text-indent: 8px;
+    }
+
+.detail_group {
+    width: 96%;
+    margin: 5px auto;
+}
+
+    .detail_group > div {
+        margin: 5px 0;
+    }
+
+    .detail_group div.column_two > div {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 40%;
+        color: #1297EF;
+        padding: 10px 5px 0 5px;
+    }
+
+    .detail_group > div .title {
+        color: #1297EF;
+        padding: 10px 5px 0 5px;
+    }
+
+    .detail_group > div table {
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+    }
+
+        .detail_group > div table tr {
+            height: 30px;
+        }
+
+            .detail_group > div table tr.gray {
+                background-color: #F4F4F4;
+            }
+
+        .detail_group > div table thead {
+            background-color: #D6D6D6;
+        }
+
+        .detail_group > div table ol {
+            text-align: left;
+            padding: 10px;
+        }
+
+.templateDownload {
+    display: inline-block;
+    float: right;
+    margin-right: 1%;
+}

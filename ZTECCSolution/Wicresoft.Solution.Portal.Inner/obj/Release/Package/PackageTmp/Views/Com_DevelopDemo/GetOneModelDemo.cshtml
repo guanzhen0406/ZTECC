@@ -1,0 +1,57 @@
+﻿@using Wicresoft.Solution.PortalModel
+@model Sys_Menu_Model
+@{
+    ViewBag.Title = "单条数据";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom bg_white">
+    <div class="tableSet">
+        <div class="gray">
+            <div class="left"><span class="red">*</span>名称:</div>
+            <div class="right">
+                <input type="text" value="@Model.Name" id="Scrore1To15Days" name="Scrore1To15Days" readonly="readonly"/>
+            </div>
+        </div>
+        <div class="white">
+            <div class="left"><span class="red">*</span>ICO:</div>
+            <div class="right">
+                <input type="text" value="@Model.ICO" id="Scrore16To60Days" name="Scrore16To60Days" readonly="readonly"/>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 10px;">
+        <ul>
+            <li><span style="color: red;">*</span>架构说明：</li>
+            <li><span style="color: red;">1.&nbsp;</span>Bussiness，业务逻辑，接口定义及实现</li>
+            <li><span style="color: red;">2.&nbsp;</span>DataAccess，数据仓储</li>
+            <li><span style="color: red;">3.&nbsp;</span>DataEntity，数据库优先，实体entity</li>
+            <li><span style="color: red;">4.&nbsp;</span>Domain，通用方法，DI中IOC注册</li>
+            <li><span style="color: red;">5.&nbsp;</span>Model，PortalModel为展示model</li>
+            <li><span style="color: red;">6.&nbsp;</span>OutInterface，window service，webservice和wcf等</li>
+            <li><span style="color: red;">7.&nbsp;</span>Portal，Web端，含pc，webapp，微信等</li>
+            <li><span style="color: red;">8.&nbsp;</span>Reference，第三方dll</li>
+            <li><span style="color: red;">9.&nbsp;</span>ServiceBridge，封装http请求桥接层</li>
+            <li><span style="color: red;">10.&nbsp;</span>Test，单元测试</li>
+            <li><span style="color: red;">11.&nbsp;</span>PortalAPI，Web Api，数据入口</li>
+
+            <li><span style="color: red;">*</span>示例备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>单条数据获取并展示，通过调试熟悉项目结构及数据流向</li>
+            <li><span style="color: red;">2.&nbsp;</span>数据仓储曾Repository和PortalModel中T4模板应用</li>
+            <li><span style="color: red;">3.&nbsp;</span>服务入口Web Api</li>
+            <li><span style="color: red;">4.&nbsp;</span>封装HTTP请求桥接层ServiceBridge</li>
+            <li><span style="color: red;">5.&nbsp;</span>IOC反转，Domain中DI配置，依赖接口编程</li>
+            <li><span style="color: red;">6.&nbsp;</span>BLL层Model与Entity转化，Core中EntityMapping配置</li>
+            <li><span style="color: red;">7.&nbsp;</span>PortalModel为展示model，entity实体隔离</li>
+            <li><span style="color: red;">8.&nbsp;</span>Utils，通用方法，枚举，配置</li>
+        </ul>
+    </div>
+</div>

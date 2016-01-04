@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "提示信息";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript">
+        $(function () {
+            Dialog.alert($("#tips").val(), {
+                okCallback: function () {
+                    window.close();
+                }
+            });
+            return;
+        });
+    </script>
+}
+
+<div style="width: 100%; height: 768px;">
+    <input type="hidden" id="tips" value="@ViewBag.Tips"/>
+</div>

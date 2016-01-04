@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "DataEntity";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>Entity，数据库实体，数据库优先，根据数据库实体更新entity</li>
+            <li><span style="color: red;">2.&nbsp;</span>自定义entity，在SelfEntity中扩展，扩展的entity只能在DAL和BLL使用</li>
+            <li><span style="color: red;">3.&nbsp;</span>PortalModel，根据自定义实体，自定义带_Model后缀的自定义model,供DAL之外使用</li>
+            <li><span style="color: red;">4.&nbsp;</span>PortalAPI中的webconfig的实体链接字符串必须与此处webconfig保持一致</li>
+            <li><span style="color: red;">5.&nbsp;</span>Entity中的modle赋值可以使用MapperObject</li>
+        </ul>
+    </div>
+</div>

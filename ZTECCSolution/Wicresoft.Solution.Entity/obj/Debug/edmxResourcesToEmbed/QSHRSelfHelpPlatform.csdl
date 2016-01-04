@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QSHRSelfHelpPlatformModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QSHRSelfHelpPlatformEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Com_UploadFile" EntityType="QSHRSelfHelpPlatformModel.Com_UploadFile" />
+    <EntitySet Name="Sys_Group" EntityType="QSHRSelfHelpPlatformModel.Sys_Group" />
+    <EntitySet Name="Sys_GroupDataPermission" EntityType="QSHRSelfHelpPlatformModel.Sys_GroupDataPermission" />
+    <EntitySet Name="Sys_GroupUser" EntityType="QSHRSelfHelpPlatformModel.Sys_GroupUser" />
+    <EntitySet Name="Sys_Log" EntityType="QSHRSelfHelpPlatformModel.Sys_Log" />
+    <EntitySet Name="Sys_Menu" EntityType="QSHRSelfHelpPlatformModel.Sys_Menu" />
+    <EntitySet Name="Sys_Role" EntityType="QSHRSelfHelpPlatformModel.Sys_Role" />
+    <EntitySet Name="Sys_RoleMenuPermission" EntityType="QSHRSelfHelpPlatformModel.Sys_RoleMenuPermission" />
+    <EntitySet Name="Sys_RoleUser" EntityType="QSHRSelfHelpPlatformModel.Sys_RoleUser" />
+    <EntitySet Name="Sys_User" EntityType="QSHRSelfHelpPlatformModel.Sys_User" />
+  </EntityContainer>
+  <EntityType Name="Com_UploadFile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="FileType" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="NewFileName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="OldFileName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="FilePath" Type="String" MaxLength="512" Unicode="true" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Sys_Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="GroupType" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Sys_GroupDataPermission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="HotelUnifyNo" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Sys_GroupUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="ADAccount" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Sys_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Logger" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Level" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Stacktrace" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Host" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Url" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Sys_Menu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="ControllerName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="ActionName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="ICO" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="IsFirstSecondMenu" Type="Boolean" />
+    <Property Name="CreateBy" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Sys_Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Sys_RoleMenuPermission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="MenuID" Type="Int32" />
+    <Property Name="IsSelected" Type="Int32" />
+    <Property Name="IsCommonMenu" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Sys_RoleUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="ADAccount" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Sys_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeNo" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="ChineseName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="EnglishName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyEmail" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="IDNumber" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="MobileNum" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="BirthDay" Type="DateTime" Precision="3" />
+    <Property Name="DeptShortName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ResponsibleId" Type="Int32" />
+    <Property Name="SuperiorCode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CostCenter" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="EmpType" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Careerband" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="PositionNo" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Position" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="PositionLevel" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ReportTo" Type="Int32" />
+    <Property Name="ReportToName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="DptNo" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="ADAccount" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="JoinGroupDate" Type="DateTime" Precision="3" />
+    <Property Name="SuperiorId" Type="Int32" />
+    <Property Name="StructureId" Type="Int32" />
+    <Property Name="EntryProperty" Type="Int32" />
+    <Property Name="SyncOn" Type="DateTime" Precision="3" />
+    <Property Name="IsOverDirector" Type="Int32" />
+  </EntityType>
+</Schema>

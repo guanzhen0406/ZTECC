@@ -1,0 +1,196 @@
+﻿body {
+    height: 100%;
+}
+
+.amountMessage {
+    width: 100%;
+    background: white;
+    margin: 5px 0 3px 0;
+}
+
+[class="amountMessage"] > li {
+    width: 48.9%;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    cursor: pointer;
+}
+
+.LiBlock {
+    border: 1px solid #017CCC;
+    margin: 2px 1px 2px 1px;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.topLi {
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #017CCC;
+}
+
+.Amount {
+    background: #017CCC;
+    color: white;
+}
+
+.messageTip {
+    background: white;
+    margin: 0 0 3px 0;
+}
+
+.mtlTitle {
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #017CCC;
+    margin: 0 10px 0 10px;
+    position: relative;
+}
+
+.mtlTitle_more {
+    right: 0px;
+    position: absolute;
+}
+
+.mtlList {
+    margin: 10px 0;
+    height: 130px;
+    overflow: hidden;
+}
+
+    .mtlList > li {
+        width: 210px;
+        height: 25px;
+        line-height: 25px;
+        *height: 20px;
+        *line-height: 20px;
+        margin: 3px;
+        padding-left: 8px;
+        font-size: 10pt;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        text-overflow: ellipsis;
+    }
+
+
+
+.icon-warning-sign {
+    color: #ffd800;
+    padding-right: 5px;
+}
+
+.mtlList > li .icon-warning-sign {
+    position: absolute;
+    top: 5px;
+}
+
+.LiContent {
+    width: 200px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+}
+
+.mtlList > li .LiContent {
+    top: 0px;
+    left: 30px;
+}
+
+.icon_yhsc {
+    background-position: -457px -507px;
+}
+
+.icon_jmzc {
+    background-position: -531px -507px;
+}
+
+.icon_kylc {
+    background-position: -604px -507px;
+}
+
+.iconSy_sLT {
+    padding-left: 8px;
+}
+
+.StoreList {
+    position: relative;
+}
+
+.myAttention {
+    display: none;
+    width: 100%;
+    z-index: 1000;
+    background: #F4F4F4;
+    position: absolute;
+}
+
+.icon-remove {
+    padding-left: 10px;
+}
+
+.select_colorItem {
+    width: 0.5%;
+    height: 24px;
+    margin-left: 1%;
+    background: #017CCC;
+    display: inline-block;
+    position: absolute;
+    margin-top: 9px;
+}
+
+[data-role="myAttention_select"] > li {
+    line-height: 40px;
+    color: rgb(138, 135, 135);
+    font-size: 11pt;
+    font-weight: bold;
+    *display: inline;
+    *zoom: 1;
+}
+
+    [data-role="myAttention_select"] > li > ul {
+        width: 89.5%;
+        padding-left: 100px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+    }
+
+        [data-role="myAttention_select"] > li > ul > li.active {
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            background: #017CCC;
+        }
+
+.select_ItemTitle {
+    width: 8%;
+    display: inline-block;
+    position: absolute;
+    padding-left: 2%;
+}
+
+[data-role="mAs_select_item"] > li {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px 0 10px;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #017CCC;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    cursor:pointer;
+}
+
+[class="mtlMenu"] > li {
+    display: inline-block;
+    width: 31%;
+    height: 70px;
+}

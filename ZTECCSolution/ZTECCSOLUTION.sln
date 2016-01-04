@@ -1,0 +1,277 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portal", "Portal", "{9A71882D-6198-48CD-A3F5-7E839ED498CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wicresoft.Solution.Domain", "Wicresoft.Solution.Domain\Wicresoft.Solution.Domain.csproj", "{4A2D0DC9-434D-4C01-B41F-1E5B309DCD8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wicresoft.Solution.Portal.Inner", "Wicresoft.Solution.Portal.Inner\Wicresoft.Solution.Portal.Inner.csproj", "{85024B81-C4EF-497F-8E46-77065D100D51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{434E4CCA-07D1-4FA4-8801-46B65C8CE48C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wicresoft.Solution.Utils", "Wicresoft.Solution.Utils\Wicresoft.Solution.Utils.csproj", "{7EE25E60-CC13-4080-AE4C-D7126D624059}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{FE6C13C4-247B-4E66-98B7-C2323BF9B556}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wicresoft.Solution.PortalModel", "Wicresoft.Solution.PortalModel\Wicresoft.Solution.PortalModel.csproj", "{45B0C41F-BCFF-449C-9F7B-1B8740C1C55B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common Javascript Files", "Common Javascript Files", "{B034E753-5582-41FD-A9DD-722665D75D76}"
+	ProjectSection(SolutionItems) = preProject
+		Common Javascript Files\excanvas.js = Common Javascript Files\excanvas.js
+		Common Javascript Files\extend.js = Common Javascript Files\extend.js
+		Common Javascript Files\html5.js = Common Javascript Files\html5.js
+		Common Javascript Files\ie-css3.htc = Common Javascript Files\ie-css3.htc
+		Common Javascript Files\jquery.easyui.min.js = Common Javascript Files\jquery.easyui.min.js
+		Common Javascript Files\jquery.min.js = Common Javascript Files\jquery.min.js
+		Common Javascript Files\underscore.js = Common Javascript Files\underscore.js
+		Common Javascript Files\utility.js = Common Javascript Files\utility.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common Stylesheet Files", "Common Stylesheet Files", "{1D2AFF9B-DDC3-4C96-BB43-5DFA49AEB144}"
+	ProjectSection(SolutionItems) = preProject
+		Common Stylesheet Files\font-awesome-ie7.css = Common Stylesheet Files\font-awesome-ie7.css
+		Common Stylesheet Files\font-awesome.css = Common Stylesheet Files\font-awesome.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "font", "font", "{F9214A0D-F0BF-4984-A56C-5483C8E67742}"
+	ProjectSection(SolutionItems) = preProject
+		Common Stylesheet Files\font\fontawesome-webfont.eot = Common Stylesheet Files\font\fontawesome-webfont.eot
+		Common Stylesheet Files\font\fontawesome-webfont.svg = Common Stylesheet Files\font\fontawesome-webfont.svg
+		Common Stylesheet Files\font\fontawesome-webfont.ttf = Common Stylesheet Files\font\fontawesome-webfont.ttf
+		Common Stylesheet Files\font\fontawesome-webfont.woff = Common Stylesheet Files\font\fontawesome-webfont.woff
+		Common Stylesheet Files\font\FontAwesome.otf = Common Stylesheet Files\font\FontAwesome.otf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{1E22FD98-96D6-4195-BB51-DC8C9E10A993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wicresoft.Solution.DAL", "Wicresoft.Solution.DAL\Wicresoft.Solution.DAL.csproj", "{67C5A594-2BE3-4CE7-84D7-2C02BAF4A3B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataEntity", "DataEntity", "{BAA697C5-B25E-4F1D-95CD-7C05DC869E5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wicresoft.Solution.Entity", "Wicresoft.Solution.Entity\Wicresoft.Solution.Entity.csproj", "{EEBCE1A9-B1D2-4B39-8121-E019D5EC9848}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bussiness", "Bussiness", "{90393DD4-1C0F-4135-A6E2-2A082951388A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wicresoft.Solution.BLL", "Wicresoft.Solution.BLL\Wicresoft.Solution.BLL.csproj", "{DCB752ED-BC22-4DC1-9B9C-1BE7134CE006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wicresoft.Solution.IBLL", "Wicresoft.Solution.IBLL\Wicresoft.Solution.IBLL.csproj", "{702B7E8D-B370-49B0-A140-BB484691A787}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common Images", "Common Images", "{CABEF4C5-4984-4C03-896E-A93D15D2F501}"
+	ProjectSection(SolutionItems) = preProject
+		Common Images\404.png = Common Images\404.png
+		..\..\我的文件夹\图片切图\HanTing\all.png = ..\..\我的文件夹\图片切图\HanTing\all.png
+		Common Images\button-bg.png = Common Images\button-bg.png
+		Common Images\loading.gif = Common Images\loading.gif
+		Common Images\transparentImg.png = Common Images\transparentImg.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "themes", "themes", "{73DD5BF0-0A90-4E60-B531-C46C1629E3DB}"
+	ProjectSection(SolutionItems) = preProject
+		Common Stylesheet Files\themes\icon.css = Common Stylesheet Files\themes\icon.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "default", "default", "{5A249AB9-EC14-4D24-878B-89179A12E6F7}"
+	ProjectSection(SolutionItems) = preProject
+		Common Stylesheet Files\themes\default\datagrid.css = Common Stylesheet Files\themes\default\datagrid.css
+		Common Stylesheet Files\themes\default\easyui.css = Common Stylesheet Files\themes\default\easyui.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{6D516094-1D55-4572-B001-5B38553E8ABF}"
+	ProjectSection(SolutionItems) = preProject
+		Common Stylesheet Files\themes\default\images\accordion_arrows.png = Common Stylesheet Files\themes\default\images\accordion_arrows.png
+		Common Stylesheet Files\themes\default\images\blank.gif = Common Stylesheet Files\themes\default\images\blank.gif
+		Common Stylesheet Files\themes\default\images\calendar_arrows.png = Common Stylesheet Files\themes\default\images\calendar_arrows.png
+		Common Stylesheet Files\themes\default\images\combo_arrow.png = Common Stylesheet Files\themes\default\images\combo_arrow.png
+		Common Stylesheet Files\themes\default\images\datagrid_icons.png = Common Stylesheet Files\themes\default\images\datagrid_icons.png
+		Common Stylesheet Files\themes\default\images\datebox_arrow.png = Common Stylesheet Files\themes\default\images\datebox_arrow.png
+		Common Stylesheet Files\themes\default\images\layout_arrows.png = Common Stylesheet Files\themes\default\images\layout_arrows.png
+		Common Stylesheet Files\themes\default\images\linkbutton_bg.png = Common Stylesheet Files\themes\default\images\linkbutton_bg.png
+		Common Stylesheet Files\themes\default\images\loading.gif = Common Stylesheet Files\themes\default\images\loading.gif
+		Common Stylesheet Files\themes\default\images\menu_arrows.png = Common Stylesheet Files\themes\default\images\menu_arrows.png
+		Common Stylesheet Files\themes\default\images\messager_icons.png = Common Stylesheet Files\themes\default\images\messager_icons.png
+		Common Stylesheet Files\themes\default\images\pagination_icons.png = Common Stylesheet Files\themes\default\images\pagination_icons.png
+		Common Stylesheet Files\themes\default\images\panel_tools.png = Common Stylesheet Files\themes\default\images\panel_tools.png
+		Common Stylesheet Files\themes\default\images\searchbox_button.png = Common Stylesheet Files\themes\default\images\searchbox_button.png
+		Common Stylesheet Files\themes\default\images\slider_handle.png = Common Stylesheet Files\themes\default\images\slider_handle.png
+		Common Stylesheet Files\themes\default\images\spinner_arrows.png = Common Stylesheet Files\themes\default\images\spinner_arrows.png
+		Common Stylesheet Files\themes\default\images\tabs_icons.png = Common Stylesheet Files\themes\default\images\tabs_icons.png
+		Common Stylesheet Files\themes\default\images\tree_icons.png = Common Stylesheet Files\themes\default\images\tree_icons.png
+		Common Stylesheet Files\themes\default\images\validatebox_warning.png = Common Stylesheet Files\themes\default\images\validatebox_warning.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "icons", "icons", "{F6710CDB-D6DC-4332-A9FF-336AC6E1D3D4}"
+	ProjectSection(SolutionItems) = preProject
+		Common Stylesheet Files\themes\icons\applicatoin.png = Common Stylesheet Files\themes\icons\applicatoin.png
+		Common Stylesheet Files\themes\icons\back.png = Common Stylesheet Files\themes\icons\back.png
+		Common Stylesheet Files\themes\icons\blank.gif = Common Stylesheet Files\themes\icons\blank.gif
+		Common Stylesheet Files\themes\icons\cancel.png = Common Stylesheet Files\themes\icons\cancel.png
+		Common Stylesheet Files\themes\icons\critical.png = Common Stylesheet Files\themes\icons\critical.png
+		Common Stylesheet Files\themes\icons\cut.png = Common Stylesheet Files\themes\icons\cut.png
+		Common Stylesheet Files\themes\icons\edit_add.png = Common Stylesheet Files\themes\icons\edit_add.png
+		Common Stylesheet Files\themes\icons\edit_remove.png = Common Stylesheet Files\themes\icons\edit_remove.png
+		Common Stylesheet Files\themes\icons\filesave.png = Common Stylesheet Files\themes\icons\filesave.png
+		Common Stylesheet Files\themes\icons\help.png = Common Stylesheet Files\themes\icons\help.png
+		Common Stylesheet Files\themes\icons\mini_add.png = Common Stylesheet Files\themes\icons\mini_add.png
+		Common Stylesheet Files\themes\icons\mini_edit.png = Common Stylesheet Files\themes\icons\mini_edit.png
+		Common Stylesheet Files\themes\icons\mini_refresh.png = Common Stylesheet Files\themes\icons\mini_refresh.png
+		Common Stylesheet Files\themes\icons\no.png = Common Stylesheet Files\themes\icons\no.png
+		Common Stylesheet Files\themes\icons\normal.png = Common Stylesheet Files\themes\icons\normal.png
+		Common Stylesheet Files\themes\icons\ok.png = Common Stylesheet Files\themes\icons\ok.png
+		Common Stylesheet Files\themes\icons\pencil.png = Common Stylesheet Files\themes\icons\pencil.png
+		Common Stylesheet Files\themes\icons\print.png = Common Stylesheet Files\themes\icons\print.png
+		Common Stylesheet Files\themes\icons\redo.png = Common Stylesheet Files\themes\icons\redo.png
+		Common Stylesheet Files\themes\icons\reload.png = Common Stylesheet Files\themes\icons\reload.png
+		Common Stylesheet Files\themes\icons\search.png = Common Stylesheet Files\themes\icons\search.png
+		Common Stylesheet Files\themes\icons\sum.png = Common Stylesheet Files\themes\icons\sum.png
+		Common Stylesheet Files\themes\icons\tip.png = Common Stylesheet Files\themes\icons\tip.png
+		Common Stylesheet Files\themes\icons\undo.png = Common Stylesheet Files\themes\icons\undo.png
+		Common Stylesheet Files\themes\icons\warn.png = Common Stylesheet Files\themes\icons\warn.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatePicker", "DatePicker", "{8C2A6AA3-5FE0-4C09-A694-DD361E811059}"
+	ProjectSection(SolutionItems) = preProject
+		Common Javascript Files\DatePicker\calendar.js = Common Javascript Files\DatePicker\calendar.js
+		Common Javascript Files\DatePicker\WdatePicker.js = Common Javascript Files\DatePicker\WdatePicker.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lang", "lang", "{CAE58E8C-365C-4569-9A0A-0607C4CC811C}"
+	ProjectSection(SolutionItems) = preProject
+		Common Javascript Files\DatePicker\lang\en.js = Common Javascript Files\DatePicker\lang\en.js
+		Common Javascript Files\DatePicker\lang\zh-cn.js = Common Javascript Files\DatePicker\lang\zh-cn.js
+		Common Javascript Files\DatePicker\lang\zh-tw.js = Common Javascript Files\DatePicker\lang\zh-tw.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "skin", "skin", "{710D6ABF-837D-44CB-B82C-D06AE1479589}"
+	ProjectSection(SolutionItems) = preProject
+		Common Javascript Files\DatePicker\skin\datePicker.gif = Common Javascript Files\DatePicker\skin\datePicker.gif
+		Common Javascript Files\DatePicker\skin\WdatePicker.css = Common Javascript Files\DatePicker\skin\WdatePicker.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "default", "default", "{457BFC98-1CD7-4CFB-B62A-E40D80C88F8D}"
+	ProjectSection(SolutionItems) = preProject
+		Common Javascript Files\DatePicker\skin\default\datepicker.css = Common Javascript Files\DatePicker\skin\default\datepicker.css
+		Common Javascript Files\DatePicker\skin\default\img.gif = Common Javascript Files\DatePicker\skin\default\img.gif
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{4FFE3187-EB32-4064-A334-A6BC8F43A820}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\HTFranchiseeSys\src\HZFranchiseeSolution\packages\Quartz.2.2\lib\net40\Quartz.dll = ..\..\HTFranchiseeSys\src\HZFranchiseeSolution\packages\Quartz.2.2\lib\net40\Quartz.dll
+		..\..\HTFranchiseeSys\src\HZFranchiseeSolution\packages\Quartz.2.2\lib\net40\Quartz.pdb = ..\..\HTFranchiseeSys\src\HZFranchiseeSolution\packages\Quartz.2.2\lib\net40\Quartz.pdb
+		..\..\HTFranchiseeSys\src\HZFranchiseeSolution\packages\Quartz.2.2\lib\net40\Quartz.xml = ..\..\HTFranchiseeSys\src\HZFranchiseeSolution\packages\Quartz.2.2\lib\net40\Quartz.xml
+		..\..\HuazhuMobileSolution\Src\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll = ..\..\HuazhuMobileSolution\Src\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll
+		..\..\HuazhuMobileSolution\Src\packages\structuremap.2.6.4.1\lib\net40\StructureMap.pdb = ..\..\HuazhuMobileSolution\Src\packages\structuremap.2.6.4.1\lib\net40\StructureMap.pdb
+		..\..\HuazhuMobileSolution\Src\packages\structuremap.2.6.4.1\lib\net40\StructureMap.XML = ..\..\HuazhuMobileSolution\Src\packages\structuremap.2.6.4.1\lib\net40\StructureMap.XML
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OutInterface", "OutInterface", "{CD6763A2-9FA1-47F6-B09F-95330C7F2A8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wicresoft.Solution.WcfService", "Wicresoft.Solution.WcfService\Wicresoft.Solution.WcfService.csproj", "{B0F4546E-F087-466B-88D2-8AE3B0A43570}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Prd|Any CPU = Prd|Any CPU
+		Release|Any CPU = Release|Any CPU
+		UAT|Any CPU = UAT|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A2D0DC9-434D-4C01-B41F-1E5B309DCD8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2D0DC9-434D-4C01-B41F-1E5B309DCD8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2D0DC9-434D-4C01-B41F-1E5B309DCD8A}.Prd|Any CPU.ActiveCfg = Prd|Any CPU
+		{4A2D0DC9-434D-4C01-B41F-1E5B309DCD8A}.Prd|Any CPU.Build.0 = Prd|Any CPU
+		{4A2D0DC9-434D-4C01-B41F-1E5B309DCD8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2D0DC9-434D-4C01-B41F-1E5B309DCD8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2D0DC9-434D-4C01-B41F-1E5B309DCD8A}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{4A2D0DC9-434D-4C01-B41F-1E5B309DCD8A}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{85024B81-C4EF-497F-8E46-77065D100D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85024B81-C4EF-497F-8E46-77065D100D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85024B81-C4EF-497F-8E46-77065D100D51}.Prd|Any CPU.ActiveCfg = Prd|Any CPU
+		{85024B81-C4EF-497F-8E46-77065D100D51}.Prd|Any CPU.Build.0 = Prd|Any CPU
+		{85024B81-C4EF-497F-8E46-77065D100D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85024B81-C4EF-497F-8E46-77065D100D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85024B81-C4EF-497F-8E46-77065D100D51}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{85024B81-C4EF-497F-8E46-77065D100D51}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{7EE25E60-CC13-4080-AE4C-D7126D624059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE25E60-CC13-4080-AE4C-D7126D624059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE25E60-CC13-4080-AE4C-D7126D624059}.Prd|Any CPU.ActiveCfg = Prd|Any CPU
+		{7EE25E60-CC13-4080-AE4C-D7126D624059}.Prd|Any CPU.Build.0 = Prd|Any CPU
+		{7EE25E60-CC13-4080-AE4C-D7126D624059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE25E60-CC13-4080-AE4C-D7126D624059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE25E60-CC13-4080-AE4C-D7126D624059}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{7EE25E60-CC13-4080-AE4C-D7126D624059}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{45B0C41F-BCFF-449C-9F7B-1B8740C1C55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B0C41F-BCFF-449C-9F7B-1B8740C1C55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B0C41F-BCFF-449C-9F7B-1B8740C1C55B}.Prd|Any CPU.ActiveCfg = UAT|Any CPU
+		{45B0C41F-BCFF-449C-9F7B-1B8740C1C55B}.Prd|Any CPU.Build.0 = UAT|Any CPU
+		{45B0C41F-BCFF-449C-9F7B-1B8740C1C55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B0C41F-BCFF-449C-9F7B-1B8740C1C55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B0C41F-BCFF-449C-9F7B-1B8740C1C55B}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{45B0C41F-BCFF-449C-9F7B-1B8740C1C55B}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{67C5A594-2BE3-4CE7-84D7-2C02BAF4A3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67C5A594-2BE3-4CE7-84D7-2C02BAF4A3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67C5A594-2BE3-4CE7-84D7-2C02BAF4A3B7}.Prd|Any CPU.ActiveCfg = UAT|Any CPU
+		{67C5A594-2BE3-4CE7-84D7-2C02BAF4A3B7}.Prd|Any CPU.Build.0 = UAT|Any CPU
+		{67C5A594-2BE3-4CE7-84D7-2C02BAF4A3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67C5A594-2BE3-4CE7-84D7-2C02BAF4A3B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67C5A594-2BE3-4CE7-84D7-2C02BAF4A3B7}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{67C5A594-2BE3-4CE7-84D7-2C02BAF4A3B7}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{EEBCE1A9-B1D2-4B39-8121-E019D5EC9848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBCE1A9-B1D2-4B39-8121-E019D5EC9848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBCE1A9-B1D2-4B39-8121-E019D5EC9848}.Prd|Any CPU.ActiveCfg = UAT|Any CPU
+		{EEBCE1A9-B1D2-4B39-8121-E019D5EC9848}.Prd|Any CPU.Build.0 = UAT|Any CPU
+		{EEBCE1A9-B1D2-4B39-8121-E019D5EC9848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBCE1A9-B1D2-4B39-8121-E019D5EC9848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEBCE1A9-B1D2-4B39-8121-E019D5EC9848}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{EEBCE1A9-B1D2-4B39-8121-E019D5EC9848}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{DCB752ED-BC22-4DC1-9B9C-1BE7134CE006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB752ED-BC22-4DC1-9B9C-1BE7134CE006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB752ED-BC22-4DC1-9B9C-1BE7134CE006}.Prd|Any CPU.ActiveCfg = UAT|Any CPU
+		{DCB752ED-BC22-4DC1-9B9C-1BE7134CE006}.Prd|Any CPU.Build.0 = UAT|Any CPU
+		{DCB752ED-BC22-4DC1-9B9C-1BE7134CE006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB752ED-BC22-4DC1-9B9C-1BE7134CE006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCB752ED-BC22-4DC1-9B9C-1BE7134CE006}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{DCB752ED-BC22-4DC1-9B9C-1BE7134CE006}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{702B7E8D-B370-49B0-A140-BB484691A787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702B7E8D-B370-49B0-A140-BB484691A787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702B7E8D-B370-49B0-A140-BB484691A787}.Prd|Any CPU.ActiveCfg = UAT|Any CPU
+		{702B7E8D-B370-49B0-A140-BB484691A787}.Prd|Any CPU.Build.0 = UAT|Any CPU
+		{702B7E8D-B370-49B0-A140-BB484691A787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702B7E8D-B370-49B0-A140-BB484691A787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702B7E8D-B370-49B0-A140-BB484691A787}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{702B7E8D-B370-49B0-A140-BB484691A787}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{B0F4546E-F087-466B-88D2-8AE3B0A43570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F4546E-F087-466B-88D2-8AE3B0A43570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F4546E-F087-466B-88D2-8AE3B0A43570}.Prd|Any CPU.ActiveCfg = UAT|Any CPU
+		{B0F4546E-F087-466B-88D2-8AE3B0A43570}.Prd|Any CPU.Build.0 = UAT|Any CPU
+		{B0F4546E-F087-466B-88D2-8AE3B0A43570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F4546E-F087-466B-88D2-8AE3B0A43570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F4546E-F087-466B-88D2-8AE3B0A43570}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{B0F4546E-F087-466B-88D2-8AE3B0A43570}.UAT|Any CPU.Build.0 = UAT|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{85024B81-C4EF-497F-8E46-77065D100D51} = {9A71882D-6198-48CD-A3F5-7E839ED498CB}
+		{B034E753-5582-41FD-A9DD-722665D75D76} = {9A71882D-6198-48CD-A3F5-7E839ED498CB}
+		{1D2AFF9B-DDC3-4C96-BB43-5DFA49AEB144} = {9A71882D-6198-48CD-A3F5-7E839ED498CB}
+		{CABEF4C5-4984-4C03-896E-A93D15D2F501} = {9A71882D-6198-48CD-A3F5-7E839ED498CB}
+		{4A2D0DC9-434D-4C01-B41F-1E5B309DCD8A} = {434E4CCA-07D1-4FA4-8801-46B65C8CE48C}
+		{7EE25E60-CC13-4080-AE4C-D7126D624059} = {434E4CCA-07D1-4FA4-8801-46B65C8CE48C}
+		{45B0C41F-BCFF-449C-9F7B-1B8740C1C55B} = {FE6C13C4-247B-4E66-98B7-C2323BF9B556}
+		{8C2A6AA3-5FE0-4C09-A694-DD361E811059} = {B034E753-5582-41FD-A9DD-722665D75D76}
+		{F9214A0D-F0BF-4984-A56C-5483C8E67742} = {1D2AFF9B-DDC3-4C96-BB43-5DFA49AEB144}
+		{73DD5BF0-0A90-4E60-B531-C46C1629E3DB} = {1D2AFF9B-DDC3-4C96-BB43-5DFA49AEB144}
+		{67C5A594-2BE3-4CE7-84D7-2C02BAF4A3B7} = {1E22FD98-96D6-4195-BB51-DC8C9E10A993}
+		{EEBCE1A9-B1D2-4B39-8121-E019D5EC9848} = {BAA697C5-B25E-4F1D-95CD-7C05DC869E5A}
+		{DCB752ED-BC22-4DC1-9B9C-1BE7134CE006} = {90393DD4-1C0F-4135-A6E2-2A082951388A}
+		{702B7E8D-B370-49B0-A140-BB484691A787} = {90393DD4-1C0F-4135-A6E2-2A082951388A}
+		{5A249AB9-EC14-4D24-878B-89179A12E6F7} = {73DD5BF0-0A90-4E60-B531-C46C1629E3DB}
+		{F6710CDB-D6DC-4332-A9FF-336AC6E1D3D4} = {73DD5BF0-0A90-4E60-B531-C46C1629E3DB}
+		{6D516094-1D55-4572-B001-5B38553E8ABF} = {5A249AB9-EC14-4D24-878B-89179A12E6F7}
+		{CAE58E8C-365C-4569-9A0A-0607C4CC811C} = {8C2A6AA3-5FE0-4C09-A694-DD361E811059}
+		{710D6ABF-837D-44CB-B82C-D06AE1479589} = {8C2A6AA3-5FE0-4C09-A694-DD361E811059}
+		{457BFC98-1CD7-4CFB-B62A-E40D80C88F8D} = {710D6ABF-837D-44CB-B82C-D06AE1479589}
+		{B0F4546E-F087-466B-88D2-8AE3B0A43570} = {CD6763A2-9FA1-47F6-B09F-95330C7F2A8A}
+	EndGlobalSection
+EndGlobal

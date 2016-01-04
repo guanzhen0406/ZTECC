@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "弹出确认框";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+        <br />
+        <input type="button" class="button searchButton" value="弹出确认框" onclick="AutoSubmitData();">
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>utility.js中注册控件，搜索关键字'弹出确认框'，window.Dialog的子事件</li>
+            <li><span style="color: red;">2.&nbsp;</span>developDemo.js中用Dialog.confirm</li>
+            <li><span style="color: red;">3.&nbsp;</span>确认，回调函数 okCallback，可重写</li>
+            <li><span style="color: red;">4.&nbsp;</span>取消，回调函数 cancelCallback，可重写</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "日期控件";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div style="height: 47px; background: white;">
+        <div style="height: 47px; background: white;">
+            <div class="dataOperation">
+                <span class="doText">批次：</span>
+                <div class="attachCalendarInput">
+                    <input type="text" class=" intoTime_input doinput datePicker" date-format="yyyy-MM-dd" date-max="%y-%M-%d" readonly="readonly" id="importDate1" style="width: 130px;" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                    <i class="icon-calendar"></i>
+                </div>
+                <span style="color: red;">*</span>年月日yyyy-MM-dd
+            </div>
+        </div>
+    </div>
+    <div style="height: 47px; background: white;">
+        <div class="dataOperation">
+            <span class="doText">批次：</span>
+            <div class="attachCalendarInput">
+                <input type="text" class=" intoTime_input doinput datePicker" date-format="yyyy-MM" date-max="%y-{%M}" readonly="readonly" id="importDate2" style="width: 130px;" value="@DateTime.Now.ToString("yyyy-MM")" />
+                <i class="icon-calendar"></i>
+            </div>
+            <span style="color: red;">*</span>年月yyyy-MM
+        </div>
+    </div>
+    <div style="height: 47px; background: white;">
+        <div class="dataOperation">
+            <span class="doText">批次：</span>
+            <div class="attachCalendarInput">
+                <input type="text" class=" intoTime_input doinput datePicker" date-format="yyyy" date-min="{%y-2}" date-max="%y" readonly="readonly" id="importDate3" style="width: 130px;" value="@DateTime.Now.ToString("yyyy")" />
+                <i class="icon-calendar"></i>
+            </div>
+            <span style="color: red;">*</span>年yyyy--最小限制
+        </div>
+    </div>
+    <div style="height: 47px; background: white;">
+        <div class="dataOperation">
+            <span class="doText">批次：</span>
+            <div class="attachCalendarInput">
+                <input type="text" class=" intoTime_input doinput datePicker" date-format="yyyy-MM" date-max="%y-{%M-1}" readonly="readonly" id="importDate4" style="width: 130px;" value="@DateTime.Now.AddMonths(-1).ToString("yyyy-MM")" />
+                <i class="icon-calendar"></i>
+            </div>
+            <span style="color: red;">*</span>默认上个月
+        </div>
+    </div>
+    <div style="height: 47px; background: white;">
+        <div class="dataOperation">
+            <span class="doText">批次：</span>
+            <div class="attachCalendarInput">
+                <input type="text" class=" intoTime_input doinput datePicker" date-format="yyyy-MM" date-max="%y-%M" readonly="readonly" id="importDate5" style="width: 130px;" value="@DateTime.Now.ToString("yyyy-MM")" onpicked="AdjustInportBtn"/>
+                <i class="icon-calendar"></i>
+            </div>
+            <span style="color: red;">*</span>自定义事件onpicked
+        </div>
+    </div>
+    <div style="margin-left: 10px;">
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>class中必须有datePicker</li>
+            <li><span style="color: red;">2.&nbsp;</span>date-format="yyyy-MM"，指定显示的格式</li>
+            <li><span style="color: red;">3.&nbsp;</span>date-min="%y-%M"，指定可选择的最小值</li>
+            <li><span style="color: red;">4.&nbsp;</span>date-max="%y-%M"，指定可选择的最大值</li>
+            <li><span style="color: red;">5.&nbsp;</span>readonly="readonly"，最好加上,防止用户直接修</li>
+            <li><span style="color: red;">6.&nbsp;</span>utility.js中注册控件，搜索关键字'日期控件注册'</li>
+            <li><span style="color: red;">7.&nbsp;</span>developDemo.js中注册自定义事件，搜索关键字'日期控件示例--自定义事件'</li>
+        </ul>
+    </div>
+</div>

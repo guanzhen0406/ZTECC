@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "菜单--添加";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_iframe.css" />
+    <script type="text/javascript" src="~/Scripts/libs/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/Scripts/admin.js"></script>
+}
+
+<input type="hidden" value="@ViewBag.ParentID" id="ParentID"/>
+<div class="header">@ViewBag.Title<i class="icon-remove" data-close="bgWrapperThree"></i></div>
+<form id="detailForm">
+    <div class="inputArea" style="margin-top: 15px;">
+        <div class="column" style="width: 380px;">
+            <div class="name"><span style='color: red;'>*</span>菜单名称:</div>
+            <input type="text" style="height: 25px; width: 168px;" id="Name" name="Name" />
+        </div>
+        <div class="column" style="width: 380px;">
+            <div class="name">控制器:</div>
+            <input type="text" style="height: 25px; width: 168px;" id="ControllerName" />
+        </div>
+        <div class="column" style="width: 380px;">
+            <div class="name">活动:</div>
+            <input type="text" style="height: 25px; width: 168px;" id="ActionName" />
+        </div>
+        <div class="column" style="width: 380px;">
+            <div class="name"><span style='color: red;'>*</span>排序:</div>
+            <input type="text" style="height: 25px; width: 168px;" id="Sort" name="Sort" />
+        </div>
+        <div class="column" style="width: 380px;">
+            <div class="name">是一二级菜单:</div>
+            <input type="checkbox" style="height: 32px; width: 20px;" id="IsFirstSecondMenu" />
+        </div>
+        <div class="column" style="width: 380px;">
+            <div class="name">图标样式:</div>
+            <input type="text" style="height: 25px; width: 168px;" id="ICO" />
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="operate">
+        <input type="button" class="button searchButton" value="保存" onclick="AutoSubmitData();">
+    </div>
+</form>

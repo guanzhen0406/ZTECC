@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SMG_EAMModelStoreContainer" CdmEntityContainer="SMG_EAMEntities">
+    <EntitySetMapping Name="Com_UploadFile">
+      <EntityTypeMapping TypeName="SMG_EAMModel.Com_UploadFile">
+        <MappingFragment StoreEntitySet="Com_UploadFile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="NewFileName" ColumnName="NewFileName" />
+          <ScalarProperty Name="OldFileName" ColumnName="OldFileName" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Group">
+      <EntityTypeMapping TypeName="SMG_EAMModel.Sys_Group">
+        <MappingFragment StoreEntitySet="Sys_Group">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="GroupType" ColumnName="GroupType" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_GroupDataPermission">
+      <EntityTypeMapping TypeName="SMG_EAMModel.Sys_GroupDataPermission">
+        <MappingFragment StoreEntitySet="Sys_GroupDataPermission">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="HotelUnifyNo" ColumnName="HotelUnifyNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_GroupUser">
+      <EntityTypeMapping TypeName="SMG_EAMModel.Sys_GroupUser">
+        <MappingFragment StoreEntitySet="Sys_GroupUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ADAccount" ColumnName="ADAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Log">
+      <EntityTypeMapping TypeName="SMG_EAMModel.Sys_Log">
+        <MappingFragment StoreEntitySet="Sys_Log">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Logger" ColumnName="Logger" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Stacktrace" ColumnName="Stacktrace" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Menu">
+      <EntityTypeMapping TypeName="SMG_EAMModel.Sys_Menu">
+        <MappingFragment StoreEntitySet="Sys_Menu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="ICO" ColumnName="ICO" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="IsFirstSecondMenu" ColumnName="IsFirstSecondMenu" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Role">
+      <EntityTypeMapping TypeName="SMG_EAMModel.Sys_Role">
+        <MappingFragment StoreEntitySet="Sys_Role">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_RoleMenuPermission">
+      <EntityTypeMapping TypeName="SMG_EAMModel.Sys_RoleMenuPermission">
+        <MappingFragment StoreEntitySet="Sys_RoleMenuPermission">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="IsSelected" ColumnName="IsSelected" />
+          <ScalarProperty Name="IsCommonMenu" ColumnName="IsCommonMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_RoleUser">
+      <EntityTypeMapping TypeName="SMG_EAMModel.Sys_RoleUser">
+        <MappingFragment StoreEntitySet="Sys_RoleUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ADAccount" ColumnName="ADAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_User">
+      <EntityTypeMapping TypeName="SMG_EAMModel.Sys_User">
+        <MappingFragment StoreEntitySet="Sys_User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeNo" ColumnName="EmployeeNo" />
+          <ScalarProperty Name="ChineseName" ColumnName="ChineseName" />
+          <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="CompanyEmail" ColumnName="CompanyEmail" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="MobileNum" ColumnName="MobileNum" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+          <ScalarProperty Name="DeptShortName" ColumnName="DeptShortName" />
+          <ScalarProperty Name="ResponsibleId" ColumnName="ResponsibleId" />
+          <ScalarProperty Name="SuperiorCode" ColumnName="SuperiorCode" />
+          <ScalarProperty Name="CostCenter" ColumnName="CostCenter" />
+          <ScalarProperty Name="EmpType" ColumnName="EmpType" />
+          <ScalarProperty Name="Careerband" ColumnName="Careerband" />
+          <ScalarProperty Name="PositionNo" ColumnName="PositionNo" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="PositionLevel" ColumnName="PositionLevel" />
+          <ScalarProperty Name="ReportTo" ColumnName="ReportTo" />
+          <ScalarProperty Name="ReportToName" ColumnName="ReportToName" />
+          <ScalarProperty Name="DptNo" ColumnName="DptNo" />
+          <ScalarProperty Name="ADAccount" ColumnName="ADAccount" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="JoinGroupDate" ColumnName="JoinGroupDate" />
+          <ScalarProperty Name="SuperiorId" ColumnName="SuperiorId" />
+          <ScalarProperty Name="StructureId" ColumnName="StructureId" />
+          <ScalarProperty Name="EntryProperty" ColumnName="EntryProperty" />
+          <ScalarProperty Name="SyncOn" ColumnName="SyncOn" />
+          <ScalarProperty Name="IsOverDirector" ColumnName="IsOverDirector" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

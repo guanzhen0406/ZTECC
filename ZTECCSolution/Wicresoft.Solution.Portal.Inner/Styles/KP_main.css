@@ -1,0 +1,620 @@
+﻿.layout_left {
+    width: 19%;
+    margin-top: 5px;
+}
+
+.layout_right {
+    width: 79.5%;
+    margin-top: 5px;
+}
+
+.layout_bottom > div {
+    background-color: white;
+}
+
+.toTop {
+    display: none;
+}
+
+.header {
+    height: 38px;
+    line-height: 38px;
+    width: 100%;
+    background-color: #2E88C4;
+    text-indent: 1em;
+    color: #F8FFFC;
+    font-size: 17px;
+}
+
+.operateList {
+    width: 140px;
+    text-align: center;
+    background-color: #F5F5F5;
+    position: absolute;
+    left: 72%;
+    border: solid 1px #8A8A8A;
+    display: none;
+    z-index: 1000;
+}
+
+    .operateList li {
+        padding: 6px 0;
+        border-bottom: solid 1px #C5C5C5;
+        font-size: 15px;
+        text-align: left;
+        margin-left: 25px;
+        padding-left: 12px;
+        font-weight: bold;
+    }
+
+        .operateList li a {
+            color: #348DCF;
+            display: block;
+            width: 100%;
+        }
+
+.left-menu {
+    background-color: white;
+    margin-top: 5px;
+}
+
+    .left-menu li {
+        border-bottom: solid 1px #D6D6D6;
+        *height: 130px;
+    }
+
+    .left-menu div.left-menu-item {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 49.54%;
+        border-right: solid 1px #D6D6D6;
+        height: 110px;
+        padding: 20px 0 0;
+        float: left;
+    }
+
+        .left-menu div.left-menu-item.active {
+            background-color: #2E88C4;
+        }
+        /* for 对账单生产*/
+        .left-menu div.left-menu-item .left-menu-icon.icons-statementsGen {
+            height: 70px;
+            width: 70px;
+            margin: 0 auto;
+            background: url(/Images/statementsGen_inactive.png) 0 0 no-repeat;
+        }
+         /* for 对账单生产*/
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-statementsGen {
+            height: 70px;
+            width: 70px;
+            margin: 0 auto;
+            background: url(/Images/statementsGen_active.png) 0 0 no-repeat;
+        }
+
+          /* for 对账单下月调整*/
+        .left-menu div.left-menu-item .left-menu-icon.icons-statements {
+            height: 70px;
+            width: 70px;
+            margin: 0 auto;
+            background: url(/Images/statements_acitve.png) 0 0 no-repeat;
+           
+        }
+         /* for 对账单下月调整*/
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-statements {
+            height: 70px;
+            width: 70px;
+            margin: 0 auto;
+             background: url(/Images/statements.png) 0 0 no-repeat;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon {
+            height: 70px;
+            width: 70px;
+            margin: 0 auto;
+            background: url(/Images/htmlpop2.png) 0 0 no-repeat;
+        }
+            /*KP模块Left_Icon*/
+            .left-menu div.left-menu-item .left-menu-icon.icons-calc {
+                background-position: -41px -37px;
+            }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-calc {
+            background-position: -41px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-office {
+            background-position: -117px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-office {
+            background-position: -117px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-report {
+            background-position: -193px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-report {
+            background-position: -193px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-product {
+            background-position: -273px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-product {
+            background-position: -273px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-check {
+            background-position: -352px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-check {
+            background-position: -352px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-box {
+            background-position: -439px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-box {
+            background-position: -439px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-star {
+            background-position: -518px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-star {
+            background-position: -518px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-bad {
+            background-position: -597px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-bad {
+            background-position: -597px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-data {
+            background-position: -1077px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-data {
+            background-position: -1077px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-work_manage {
+            background-position: -679px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-work_manage {
+            background-position: -679px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-common_report {
+            background-position: -911px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-common_report {
+            background-position: -911px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-hardware_check {
+            background-position: -991px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-hardware_check {
+            background-position: -991px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-application {
+            background-position: -1806px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-application {
+            background-position: -1806px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-pending_task {
+            background-position: -1886px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-pending_task {
+            background-position: -1886px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-audit_history {
+            background-position: -1967px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-audit_history {
+            background-position: -1967px -122px;
+        }
+        /*商机分析Left_Icon*/
+        .left-menu div.left-menu-item .left-menu-icon.icons-allBO {
+            background-position: -2071px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-allBO {
+            background-position: -2071px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-abandonBO {
+            background-position: -2152px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-abandonBO {
+            background-position: -2152px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-developingBO {
+            background-position: -2231px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-developingBO {
+            background-position: -2231px -122px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-edit {
+            background-position: -1404px -37px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-edit {
+            background-position: -1404px -122px;
+        }
+        /*主数据Left_Icon*/
+        .left-menu div.left-menu-item .left-menu-icon.icons-jmsmaindata {
+            background-position: -48px -283px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-jmsmaindata {
+            background-position: -48px -367px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-jmdmaindata {
+            background-position: -165px -283px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-jmdmaindata {
+            background-position: -165px -367px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-qyyjmkf {
+            background-position: -288px -283px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-qyyjmkf {
+            background-position: -288px -367px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-qyyjd {
+            background-position: -410px -283px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-qyyjd {
+            background-position: -410px -367px;
+        }
+
+
+        .left-menu div.left-menu-item .left-menu-title {
+            color: #4576B3;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-title {
+            color: #F8FFFC;
+        }
+
+        /*财务Left_Icon*/
+        .left-menu div.left-menu-item .left-menu-icon.icons-mainV09 {
+            background-position: -597px -270px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-mainV09 {
+            background-position: -597px -355px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-mainV10 {
+            background-position: -759px -270px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-mainV10 {
+            background-position: -759px -355px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-feiledSet {
+            background-position: -840px -270px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-feiledSet {
+            background-position: -840px -355px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-BIImport {
+            background-position: -924px -270px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-BIImport {
+            background-position: -924px -355px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-importData {
+            background-position: -1005px -270px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-importData {
+            background-position: -1005px -355px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-paramSet {
+            background-position: -1086px -270px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-paramSet {
+            background-position: -1086px -355px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-hotelparSet {
+            background-position: -1168px -270px;
+        }
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-hotelparSet{
+            background-position: -1168px -355px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-09pk10 {
+            background-position: -1253px -270px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-09pk10 {
+            background-position: -1253px -355px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-solidHistory {
+            background-position: -1361px -270px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-solidHistory {
+            background-position: -1361px -355px;
+        }
+
+         /*店长成本Left_Icon*/
+        .left-menu div.left-menu-item .left-menu-icon.icons-dz_solidify {
+            background-position: -1496px -271px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-dz_solidify {
+            background-position: -1496px -356px;
+        }
+
+        .left-menu div.left-menu-item .left-menu-icon.icons-dz_personnel {
+            background-position: -1602px -271px;
+        }
+
+        .left-menu div.left-menu-item.active .left-menu-icon.icons-dz_personnel {
+            background-position: -1602px -356px;
+        }
+
+iframe#rightContent {
+    top: 25%;
+}
+
+.dataOperation {
+    height: 35px;
+    width: 98%;
+    background: #F5F5F5;
+    border: 1px solid rgb(196, 196, 196);
+    margin: 5px 1%;
+    position: absolute;
+    z-index: 1000;
+}
+
+    .dataOperation.hard-check {
+        background: #F5F5F5;
+        position: relative;
+    }
+
+.dataOperationWrapper {
+    padding: 5px;
+}
+
+    .dataOperationWrapper .dataOperation {
+        position: relative;
+        margin: 0;
+        width: 100%;
+    }
+
+
+
+.doText {
+    position: relative;
+    bottom: 1px;
+    padding-left: 3px;
+}
+
+.order_dotext {
+    bottom: -1px;
+    padding-right: 10px;
+}
+
+.doinput {
+    height: 25px;
+    line-height: 25px;
+    font-size: 11pt;
+    outline: none;
+    bottom: 2px;
+    *bottom: 1px;
+    position: relative;
+    vertical-align: middle;
+    top: -3px;
+}
+
+.attachCalendarInput {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    line-height: 37px;
+    position: relative;
+    color: #909090;
+}
+
+.icon-calendar {
+    position: absolute;
+    top: 9px;
+    *top: 6px;
+    right: 5px;
+}
+
+.doButton {
+    height: 35px;
+    line-height: 31px;
+    width: 113px;
+    margin-left: 8px;
+    font-size: 14pt;
+}
+
+.pullDownSelect {
+    height: 30px;
+    font-size: 12pt;
+    width: 85px;
+    vertical-align: middle;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.dataReport {
+    height: 222px;
+    margin-bottom: 5px;
+}
+
+.dataOrder {
+    height: 42px;
+    background: white;
+    position: relative;
+    z-index: 999;
+}
+
+.dataOperate {
+    padding: 3px 10px;
+    text-align: right;
+    position: relative;
+    z-index: 999;
+}
+
+.dataOrder_do {
+    width: 98%;
+    background: white;
+    margin: 0 1%;
+}
+
+.orderButton {
+    height: 27px;
+    width: 90px;
+    line-height: 27px;
+    text-align: center;
+    color: #2E88C4;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    cursor: pointer;
+    border: 1px solid rgb(196, 196, 196);
+    margin-top: 3px;
+}
+
+    .orderButton.active {
+        height: 29px;
+        line-height: 29px;
+        color: white;
+        background: #2E88C4;
+        border: none;
+    }
+
+.icon-long-arrow-down {
+    padding-left: 10px;
+}
+
+.icon-long-arrow-up {
+    padding-left: 10px;
+}
+
+.dataTableDate {
+    height: 35px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    background: white;
+}
+
+.dataTableList {
+    background: white;
+    padding: 0 1% 10px 1%;
+    position: relative;
+    z-index: 999;
+}
+
+.dlcontentText {
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.bgWrapper iframe {
+    position: absolute;
+    height: 433px;
+    background-color: white;
+}
+
+.rowOperate {
+    padding: 4px 10px;
+    color: #428CED;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+[data-detail-link] {
+    cursor: pointer;
+}
+
+.icon_star_set {
+    height: 30px;
+    width: 120px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pieGraph {
+    height: 178px;
+    background: azure;
+}
+
+.operationTableList {
+    background: white;
+    padding: 0 5% 10px 5%;
+    position: relative;
+    width: 90%;
+}
+
+span.redBorder,
+span.typeError {
+    width: 100%;
+    text-align: left;
+    line-height: 30px;
+    position: absolute;
+    color: red;
+    top: 30px;
+    left: 32%;
+    font-size: 15px;
+    display: none;
+}
+
+input.errorBorder {
+    border: solid 1px red;
+}

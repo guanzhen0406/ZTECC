@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85024B81-C4EF-497F-8E46-77065D100D51}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wicresoft.Solution.Portal.Inner</RootNamespace>
+    <AssemblyName>Wicresoft.Solution.Portal.Inner</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DeployIisAppPath>HZFranchiseeInner</DeployIisAppPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DeployIisAppPath>HZFranchiseeInner</DeployIisAppPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="..\Common Images\404.png">
+      <Link>Images\404.png</Link>
+    </Content>
+    <Content Include="..\Common Images\all.png">
+      <Link>Images\all.png</Link>
+    </Content>
+    <Content Include="..\Common Images\button-bg.png">
+      <Link>Images\button-bg.png</Link>
+    </Content>
+    <Content Include="..\Common Images\loading.gif">
+      <Link>Images\loading.gif</Link>
+    </Content>
+    <Content Include="..\Common Images\transparentImg.png">
+      <Link>Images\transparentImg.png</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\DatePicker\calendar.js">
+      <Link>Scripts\DatePicker\calendar.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\DatePicker\lang\en.js">
+      <Link>Scripts\DatePicker\lang\en.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\DatePicker\lang\zh-cn.js">
+      <Link>Scripts\DatePicker\lang\zh-cn.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\DatePicker\lang\zh-tw.js">
+      <Link>Scripts\DatePicker\lang\zh-tw.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\DatePicker\skin\datePicker.gif">
+      <Link>Scripts\DatePicker\skin\datePicker.gif</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\DatePicker\skin\default\datepicker.css">
+      <Link>Scripts\DatePicker\skin\default\datepicker.css</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\DatePicker\skin\default\img.gif">
+      <Link>Scripts\DatePicker\skin\default\img.gif</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\DatePicker\skin\WdatePicker.css">
+      <Link>Scripts\DatePicker\skin\WdatePicker.css</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\DatePicker\WdatePicker.js">
+      <Link>Scripts\DatePicker\WdatePicker.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\excanvas.js">
+      <Link>Scripts\excanvas.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Common Javascript Files\extend.js">
+      <Link>Scripts\extend.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\html5.js">
+      <Link>Scripts\html5.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\ie-css3.htc">
+      <Link>Scripts\ie-css3.htc</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\jquery.easyui.min.js">
+      <Link>Scripts\libs\jquery.easyui.min.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\jquery.min.js">
+      <Link>Scripts\libs\jquery.min.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\json3.min.js">
+      <Link>Scripts\libs\json3.min.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\underscore.js">
+      <Link>Scripts\libs\underscore.js</Link>
+    </Content>
+    <Content Include="..\Common Javascript Files\utility.js">
+      <Link>Scripts\utility.js</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\font-awesome-ie7.css">
+      <Link>Styles\font-awesome-ie7.css</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\font-awesome.css">
+      <Link>Styles\font-awesome.css</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\font\fontawesome-webfont.svg">
+      <Link>Styles\font\fontawesome-webfont.svg</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\datagrid.css">
+      <Link>Styles\themes\default\datagrid.css</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\easyui.css">
+      <Link>Styles\themes\default\easyui.css</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\accordion_arrows.png">
+      <Link>Styles\themes\default\images\accordion_arrows.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\blank.gif">
+      <Link>Styles\themes\default\images\blank.gif</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\calendar_arrows.png">
+      <Link>Styles\themes\default\images\calendar_arrows.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\combo_arrow.png">
+      <Link>Styles\themes\default\images\combo_arrow.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\datagrid_icons.png">
+      <Link>Styles\themes\default\images\datagrid_icons.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\datebox_arrow.png">
+      <Link>Styles\themes\default\images\datebox_arrow.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\layout_arrows.png">
+      <Link>Styles\themes\default\images\layout_arrows.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\linkbutton_bg.png">
+      <Link>Styles\themes\default\images\linkbutton_bg.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\loading.gif">
+      <Link>Styles\themes\default\images\loading.gif</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\menu_arrows.png">
+      <Link>Styles\themes\default\images\menu_arrows.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\messager_icons.png">
+      <Link>Styles\themes\default\images\messager_icons.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\pagination_icons.png">
+      <Link>Styles\themes\default\images\pagination_icons.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\panel_tools.png">
+      <Link>Styles\themes\default\images\panel_tools.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\searchbox_button.png">
+      <Link>Styles\themes\default\images\searchbox_button.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\slider_handle.png">
+      <Link>Styles\themes\default\images\slider_handle.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\spinner_arrows.png">
+      <Link>Styles\themes\default\images\spinner_arrows.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\tabs_icons.png">
+      <Link>Styles\themes\default\images\tabs_icons.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\tree_icons.png">
+      <Link>Styles\themes\default\images\tree_icons.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\default\images\validatebox_warning.png">
+      <Link>Styles\themes\default\images\validatebox_warning.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icon.css">
+      <Link>Styles\themes\icon.css</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\applicatoin.png">
+      <Link>Styles\themes\icons\applicatoin.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\back.png">
+      <Link>Styles\themes\icons\back.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\blank.gif">
+      <Link>Styles\themes\icons\blank.gif</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\cancel.png">
+      <Link>Styles\themes\icons\cancel.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\critical.png">
+      <Link>Styles\themes\icons\critical.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\cut.png">
+      <Link>Styles\themes\icons\cut.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\edit_add.png">
+      <Link>Styles\themes\icons\edit_add.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\edit_remove.png">
+      <Link>Styles\themes\icons\edit_remove.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\filesave.png">
+      <Link>Styles\themes\icons\filesave.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\help.png">
+      <Link>Styles\themes\icons\help.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\mini_add.png">
+      <Link>Styles\themes\icons\mini_add.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\mini_edit.png">
+      <Link>Styles\themes\icons\mini_edit.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\mini_refresh.png">
+      <Link>Styles\themes\icons\mini_refresh.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\no.png">
+      <Link>Styles\themes\icons\no.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\normal.png">
+      <Link>Styles\themes\icons\normal.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\ok.png">
+      <Link>Styles\themes\icons\ok.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\pencil.png">
+      <Link>Styles\themes\icons\pencil.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\print.png">
+      <Link>Styles\themes\icons\print.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\redo.png">
+      <Link>Styles\themes\icons\redo.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\reload.png">
+      <Link>Styles\themes\icons\reload.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\search.png">
+      <Link>Styles\themes\icons\search.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\sum.png">
+      <Link>Styles\themes\icons\sum.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\tip.png">
+      <Link>Styles\themes\icons\tip.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\undo.png">
+      <Link>Styles\themes\icons\undo.png</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\themes\icons\warn.png">
+      <Link>Styles\themes\icons\warn.png</Link>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\404-1.png" />
+    <Content Include="Images\404-2.png" />
+    <Content Include="Images\404无法录入.png" />
+    <Content Include="Images\button-bg-red.png" />
+    <Content Include="Images\common_buildOne.png" />
+    <Content Include="Images\common_MDMApp.png" />
+    <Content Include="Images\common_nomessage.png" />
+    <Content Include="Images\common_noOpen.png" />
+    <Content Include="Images\common_open.png" />
+    <Content Include="Images\common_publicapp.png" />
+    <Content Include="Images\common_waitingWork.png" />
+    <Content Include="Images\developing.png" />
+    <Content Include="Images\E-HR.png" />
+    <Content Include="Images\edit-pen.png" />
+    <Content Include="Images\footer.png" />
+    <Content Include="Images\header-bg.png" />
+    <Content Include="Images\header-logo.png" />
+    <Content Include="Images\homePage_EHR.png" />
+    <Content Include="Images\homePage_MDMMasterData.png" />
+    <Content Include="Images\homePage_PreBuild.png" />
+    <Content Include="Images\homePage_purShare.png" />
+    <Content Include="Images\homePage_title.png" />
+    <Content Include="Images\hr\0000.png" />
+    <Content Include="Images\hr\0101.jpg" />
+    <Content Include="Images\hr\0102.jpg" />
+    <Content Include="Images\hr\010401.jpg" />
+    <Content Include="Images\hr\010402.jpg" />
+    <Content Include="Images\hr\0105.jpg" />
+    <Content Include="Images\hr\020101.jpg" />
+    <Content Include="Images\hr\020102.jpg" />
+    <Content Include="Images\htmlpop2.png" />
+    <Content Include="Images\inner_login.jpg" />
+    <Content Include="Images\inner_login_top.png" />
+    <Content Include="Images\noData.png" />
+    <Content Include="Images\noMessage.png" />
+    <Content Include="Images\openProcess-apply.png" />
+    <Content Include="Images\openProcess-build.png" />
+    <Content Include="Images\openProcess-cert.png" />
+    <Content Include="Images\openProcess-check.png" />
+    <Content Include="Images\openProcess-examine.png" />
+    <Content Include="Images\openProcess-icon.png" />
+    <Content Include="Images\radius.png" />
+    <Content Include="Images\smallIcon.png" />
+    <Content Include="Images\statements.png" />
+    <Content Include="Images\statementsGen_active.png" />
+    <Content Include="Images\statementsGen_inactive.png" />
+    <Content Include="Images\statements_acitve.png" />
+    <Content Include="Images\statement_BGH.png" />
+    <Content Include="Images\statement_BGHRed.png" />
+    <Content Include="Images\statement_BI.png" />
+    <Content Include="Images\statement_BIRed.png" />
+    <Content Include="Images\statement_CW.png" />
+    <Content Include="Images\statement_CWRed.png" />
+    <Content Include="Images\statement_DZD.png" />
+    <Content Include="Images\statement_DZDRed.png" />
+    <Content Include="Images\statement_FSZD.png" />
+    <Content Include="Images\statement_FSZDRed.png" />
+    <Content Include="Images\statement_green.png" />
+    <Content Include="Images\statement_green2.png" />
+    <Content Include="Images\statement_green3.png" />
+    <Content Include="Images\statement_red.png" />
+    <Content Include="Images\statement_red2.png" />
+    <Content Include="Images\statement_red3.png" />
+    <Content Include="Images\statement_statusgreen.png" />
+    <Content Include="Images\statement_statusred.png" />
+    <Content Include="Images\statement_XYTZ.png" />
+    <Content Include="Images\statement_XYTZRed.png" />
+    <Content Include="Images\voucher-icon.png" />
+    <Content Include="Scripts\echarts\echarts-all.js" />
+    <Content Include="Scripts\home.js" />
+    <Content Include="Scripts\libs\jquery-migrate-1.2.1.js" />
+    <Content Include="Scripts\libs\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Scripts\libs\jquery.validate.js" />
+    <Content Include="Scripts\admin.js" />
+    <Content Include="Scripts\uploadify\jquery.uploadifive.js" />
+    <Content Include="Scripts\uploadify\jquery.uploadify.js" />
+    <Content Include="Scripts\uploadify\jquery.uploadify.min.js" />
+    <Content Include="Scripts\uploadify\overErrorInfo2CN.js" />
+    <Content Include="Scripts\uploadify\uploadifive.css" />
+    <Content Include="Scripts\uploadify\uploadify-cancel.png" />
+    <Content Include="Scripts\uploadify\uploadify.css" />
+    <Content Include="Scripts\uploadify\uploadify.swf" />
+    <Content Include="DownloadFiles\风险提示-1内控主管经理.xlsx" />
+    <Content Include="DownloadFiles\风险提示-2应收账款风险.xlsx" />
+    <Content Include="DownloadFiles\风险提示-3财务风险.xlsx" />
+    <None Include="Properties\PublishProfiles\inner.pubxml" />
+    <Content Include="Scripts\developDemo.js" />
+    <Content Include="Scripts\assetManage.js" />
+    <Content Include="Styles\inputArea.css" />
+    <Content Include="Styles\jquery.jqplot.min.css" />
+    <Content Include="Styles\KP_iframe.css" />
+    <Content Include="Styles\KP_main.css" />
+    <Content Include="Styles\inner_openProcess.css" />
+    <Content Include="Styles\global.css" />
+    <Content Include="Styles\inner_home_index.css" />
+    <Content Include="Styles\inner_login.css" />
+    <Content Include="Styles\KP_special.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\uploadify\jquery.uploadify.min.js.map">
+      <DependentUpon>jquery.uploadify.js</DependentUpon>
+    </Content>
+    <Content Include="Views\Layout\_LayoutBasic.cshtml" />
+    <Content Include="Views\Layout\_LayoutLogin.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="FileUpload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Common Stylesheet Files\font\fontawesome-webfont.eot">
+      <Link>Styles\font\fontawesome-webfont.eot</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\font\fontawesome-webfont.ttf">
+      <Link>Styles\font\fontawesome-webfont.ttf</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\font\fontawesome-webfont.woff">
+      <Link>Styles\font\fontawesome-webfont.woff</Link>
+    </Content>
+    <Content Include="..\Common Stylesheet Files\font\FontAwesome.otf">
+      <Link>Styles\font\FontAwesome.otf</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Layout\_LayoutEmpty.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Layout\_LayoutMain.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wicresoft.Solution.BLL\Wicresoft.Solution.BLL.csproj">
+      <Project>{dcb752ed-bc22-4dc1-9b9c-1be7134ce006}</Project>
+      <Name>Wicresoft.Solution.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wicresoft.Solution.Domain\Wicresoft.Solution.Domain.csproj">
+      <Project>{4a2d0dc9-434d-4c01-b41f-1e5b309dcd8a}</Project>
+      <Name>Wicresoft.Solution.Domain</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Wicresoft.Solution.IBLL\Wicresoft.Solution.IBLL.csproj">
+      <Project>{702b7e8d-b370-49b0-a140-bb484691a787}</Project>
+      <Name>Wicresoft.Solution.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wicresoft.Solution.PortalModel\Wicresoft.Solution.PortalModel.csproj">
+      <Project>{45b0c41f-bcff-449c-9f7b-1b8740c1c55b}</Project>
+      <Name>Wicresoft.Solution.PortalModel</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Wicresoft.Solution.Utils\Wicresoft.Solution.Utils.csproj">
+      <Project>{7ee25e60-cc13-4080-ae4c-d7126d624059}</Project>
+      <Name>Wicresoft.Solution.Utils</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prd|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UAT|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;UAT</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>18001</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:15001/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\MSBuild.WebApplication.CopyContentLinkedFiles.1.0.0\build\MSBuild.WebApplication.CopyContentLinkedFiles.targets" Condition="Exists('..\packages\MSBuild.WebApplication.CopyContentLinkedFiles.1.0.0\build\MSBuild.WebApplication.CopyContentLinkedFiles.targets')" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

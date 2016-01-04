@@ -1,0 +1,147 @@
+﻿.toTop {
+    display: none;
+}
+
+.selectList {
+    padding: 15px 0 15px 0;
+    background: #FFF;
+}
+
+.infoTitle {
+    margin: 8px 0px 8px 30px;
+}
+
+.selectBlock {
+    width: 90%;
+    margin: 5px auto;
+    border: 2px solid #EDECEC;
+}
+
+
+[data-role="select_oneCol"] li {
+    width: 100%;
+    margin: 0 6px;
+}
+
+[data-role="select_towCol"] li {
+    width: 49%;
+    margin: 0 6px;
+}
+
+[data-role="select_threeCol"] li {
+    width: 31.84%;
+    margin: 0 6px;
+}
+
+    [data-role="select_oneCol"] li.active, [data-role="select_towCol"] li.active, [data-role="select_threeCol"] li.active {
+        color: white;
+        background: #017CCC;
+    }
+
+.textSy > li {
+    height: 45px;
+    line-height: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.infoName {
+    width: 115px;
+    float: left;
+    text-align: right;
+    padding-right: 5px;
+    font-size: 12px;
+    color: #000;
+    height: 30px;
+    line-height:30px;
+}
+
+.infoEdit {
+    height: 28px;
+    width: 220px;
+    border: 1px solid #EDECEC;
+}
+
+input.errorBorder {
+    border: solid 1px #F00;
+}
+
+span.redBorder, span.typeError {
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    color: #F00;
+    top: 31px;
+    left: 120px;
+    font-size: 12px;
+    display: none;
+}
+
+
+/*日历日期年月选择块start*/
+.dataOperation {
+    height: 35px;
+    width: 98%;
+    background: #F5F5F5;
+    border: 1px solid rgb(196, 196, 196);
+    margin: 5px 1%;
+    z-index: 1000;
+}
+
+    .dataOperation.hard-check {
+        background: #F5F5F5;
+        position: relative;
+    }
+
+.dataOperationWrapper {
+    padding: 5px;
+}
+
+    .dataOperationWrapper .dataOperation {
+        position: relative;
+        margin: 0;
+        width: 100%;
+    }
+
+.doText {
+    position: relative;
+    bottom: 1px;
+    padding-left: 3px;
+}
+
+.attachCalendarInput {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    line-height: 37px;
+    position: relative;
+    color: #909090;
+}
+
+.doinput {
+    height: 25px;
+    line-height: 25px;
+    font-size: 11pt;
+    outline: none;
+    bottom: 2px;
+    *bottom: 1px;
+    position: relative;
+    vertical-align: middle;
+    top: -3px;
+}
+
+.icon-calendar {
+    position: absolute;
+    top: 9px;
+    *top: 6px;
+    right: 5px;
+}
+
+.tableTitle {
+    text-align: center;
+    line-height: 40px;
+    margin-top: 10px;
+    border-bottom: 2px solid #F5F5F5;
+    font-weight: bold;
+}
+/*日历日期年月选择块end*/

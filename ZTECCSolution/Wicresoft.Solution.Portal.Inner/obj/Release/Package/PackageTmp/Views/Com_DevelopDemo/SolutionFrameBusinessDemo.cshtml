@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Business";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>依赖接口编程，IBLL为定义接口，BLL为接口实现</li>
+            <li><span style="color: red;">2.&nbsp;</span>Model和实体的转化在Business的BLL中进行,DAL中只能操作实体entity和自定义实体selfEntity，Controller、ServiceBridge和PortalAPI中只能使用PortalModel，BLL之外的实体复制可以使用Domain的MapperObject</li>
+            <li><span style="color: red;">3.&nbsp;</span>Model和实体的转化在Business的BLL中进行,必须在BLL的Core中的EntityMapping设置映射关系</li>
+            <li><span style="color: red;">4.&nbsp;</span>PortalAPI依赖接口编程调用Business中接口IBLL实现BLL，必须在Domain下ControllerRegistry中注册，指定实现</li>
+        </ul>
+    </div>
+</div>

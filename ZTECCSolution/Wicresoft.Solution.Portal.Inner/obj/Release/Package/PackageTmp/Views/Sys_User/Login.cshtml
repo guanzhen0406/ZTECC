@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "登录";
+    Layout = "~/Views/Layout/_LayoutLogin.cshtml";
+    var isCheckVerifyCode = (bool)ViewBag.IsCheckVerifyCode;
+}
+@using Wicresoft.Solution.PortalModel
+@model Login_Model
+@section ScriptsAndStyles{
+    <script type="text/javascript">
+        //防止在只读控件按Backspace后退键,登录页面按回车提交登录表单,2015-07-11
+        $(document).keydown(function (e) {
+            if (e.keyCode == 13 && d.tagName.toUpperCase() == 'INPUT') {
+                return true;
+            }
+        });
+    </script>
+}
+
+<div class="Inlogin_center">
+    <div class="InLogin_LRarea">
+        <img class="Limg" src="~/Images/inner_login.jpg" />
+    </div>
+    <div class="InLogin_LRarea center_right">
+        <form action="/Sys_User/Login" method="post" id="FormInnerLogin">
+            <div id="LoginBox">
+                <div class="textSy">
+                    用户名：
+                    <span class="errorMsg" id="username_error"></span>
+                </div>
+                <div class="Linput">
+                    @Html.TextBoxFor(t => t.AdAccount, new { @class = "inputSy", placeholder = "请输入用户名", maxlength = "64" })
+                    <span class="iconSy icon-user"></span>
+                </div>
+                <div class="textSy">
+                    密码：
+                    <span class="errorMsg" id="userpassword_error"></span>
+                </div>
+                <div class="Linput">
+                    @Html.PasswordFor(t => t.Password, new { @class = "inputSy", placeholder = "请输入密码", maxlength = "50" })
+                    <span class="iconSy icon-lock"></span>
+                </div>
+                @if (isCheckVerifyCode)
+                {
+                    <div class="textSy">验证码：<span class="errorMsg user_errorMsg" id="code_error"></span></div>
+                    <div class="Linput login-verify">
+                        @Html.TextBoxFor(t => t.VerifyCode, new { @class = "inputSy", id = "imgCode", placeholder = "请输入验证码", maxlength = "4" })
+                        <img class="imgCode" src="/Sys_User/GetVeriCodeImg?random=' + Math.random()" onclick="getImageCode()" title="点击验证码刷新" />
+                    </div>
+                }
+                <div class="textSy">
+                    @Html.CheckBoxFor(t => t.IsRemberUserName)
+                    <label for="ILradio">记住用户名</label>
+                    <span class="errorMsg" id="innerloginerror"></span>
+                </div>
+                <div class="Lbutton">
+                    <input type="submit" value="登 录" class="inputBotton" onclick="return innerLogin()" />
+                    <input type="hidden" id="ErrorMessage" value="@ViewBag.ErrorMessage" />
+                    <input type="hidden" id="IsCheckVerifyCode" value="@(isCheckVerifyCode.ToString())" />
+                    @Html.HiddenFor(t => t.ReturnUrl)
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

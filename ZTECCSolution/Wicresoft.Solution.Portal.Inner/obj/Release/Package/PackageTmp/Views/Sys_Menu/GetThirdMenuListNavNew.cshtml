@@ -1,0 +1,26 @@
+﻿@*@{
+    Layout = null;
+}
+@Html.Raw(ViewBag.MenuJsStr)*@
+@{
+    //ViewBag.Title = "在职证明";
+    //ViewBag.ActiveMenu = "自助申请";
+    //ViewBag.ActiveSecondMenu = "在职证明";
+    Layout = "~/Views/Layout/_LayoutMain.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+}
+
+<div class="layout_left">
+    <div class="header">@ViewBag.Title</div>
+    <div class="left-menu">
+        <ul>
+            @Html.Raw(ViewBag.MenuJsStr)
+        </ul>
+    </div>
+</div>
+<div class="layout_right">
+    <iframe src="@ViewBag.iframeTarget" name="rightContent" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="100%" id="rightContent" onload="iframeHeight(this,460)"></iframe>
+</div>
+<div style="clear: both;"></div>

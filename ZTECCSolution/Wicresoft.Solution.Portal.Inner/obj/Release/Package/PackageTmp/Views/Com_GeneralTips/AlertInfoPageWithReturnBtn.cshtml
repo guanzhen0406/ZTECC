@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "提示信息";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom bg_white">
+    <div class="tableSet">
+        <div class="gray" style="text-align: center;">
+            <span class="red">*</span>@ViewBag.Tips
+        </div>
+    </div>
+</div>
+<div class="operate" style="text-align: center;">
+    <input type="button" class="button searchButton cancel" onclick="closeTip()" value="返回">
+</div>

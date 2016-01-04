@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="-1">
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" type="text/css" href="~/Styles/font-awesome.css" />
+    <link href="@Url.Content("~/Styles/themes/default/easyui.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Styles/themes/icon.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Scripts/uploadify/uploadify.css?ver=")@DateTime.Now.Ticks" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Scripts/uploadify/uploadifive.css?ver=")@DateTime.Now.Ticks" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/global.css")" />
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/libs/json3.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/libs/jquery.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/libs/jquery.easyui.min.js?ver=")@DateTime.Now.Ticks"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/datePicker/WdatePicker.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/uploadify/jquery.uploadifive.js?ver=")@DateTime.Now.Ticks"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/uploadify/jquery.uploadify.js?ver=")@DateTime.Now.Ticks"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/libs/underscore.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/utility.js")"></script>
+    @RenderSection("ScriptsAndStyles")
+</head>
+<body>
+    <div data-role="main">
+        @RenderBody()
+    </div>
+    <div class="toTop icons" title=" 返回顶部"></div>
+    <div class="loading_ajax" id="ajaxLoading">
+        <img src="/Images/loading.gif" />
+    </div>
+    <div style="display: none;">
+        @Html.Hidden("AUTHID", Request.Cookies[FormsAuthentication.FormsCookieName] == null ? string.Empty : Request.Cookies[FormsAuthentication.FormsCookieName].Value)
+        @Html.Hidden("ASPSESSID", HttpContext.Current.Session.SessionID)
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<#@ template language="C#" debug="false" hostspecific="true"#>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ output extension=".cs"#><#
+const string inputFile = @"..\..\\Wicresoft.Solution.Entity\\ZTECC.edmx";
+
+var code = new CodeGenerationTools(this);
+var loader = new MetadataLoader(this);
+
+var ItemCollection = loader.CreateEdmItemCollection(inputFile);
+var container = ItemCollection.OfType<EntityContainer>().FirstOrDefault();
+
+#>
+using Wicresoft.Solution.Entity;
+
+namespace Wicresoft.Solution.DAL
+{
+<#
+foreach (var entity in ItemCollection.GetItems<EntityType>().OrderBy(e => e.Name))
+{
+#>
+	public partial class <#=entity.Name#>Repository : RepositoryBase<<#=entity.Name#>,<#=code.Escape(container)#>>
+	{         
+	}
+
+<#
+}
+#>
+}

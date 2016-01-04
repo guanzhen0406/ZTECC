@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "数据格式化";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="dataTableList">
+        <table id="firstLevelListDataTbl" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th data-options="field:'Name',width:120,formatter:NameFormatter">菜单名称</th>
+                    <th data-options="field:'ICO',width:180">图标样式</th>
+                    <th data-options="field:'IsFirstSecondMenu',width:100,formatter:IsFirstOrSecondMenuFormatter">是一二级菜单</th>
+                    <th data-options="field:'Sort',width:80">排序</th>
+                    <th data-options="field:'ModifyTime',width:200,formatter:DateTimeFormatter">操作时间</th>
+                    <th data-options="field:'Operate',width:220,formatter:OperateFormatter">操作</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div style="margin-left: 10px;">
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>formatter:IsSendMailStatusFormatter，对相应的字段进行预处理，IsSendMailStatusFormatter是一个方法名</li>
+            <li><span style="color: red;">2.&nbsp;</span>IsFirstOrSecondMenuFormatter，数据初始化</li>
+            <li><span style="color: red;">3.&nbsp;</span>DateTimeFormatter，日期初始化</li>
+            <li><span style="color: red;">4.&nbsp;</span>NameFormatter，链接初始化</li>
+            <li><span style="color: red;">5.&nbsp;</span>OperateFormatter，按钮初始化</li>
+            <li><span style="color: red;">6.&nbsp;</span>日期通用，其余或页面级适用</li>
+        </ul>
+    </div>
+</div>

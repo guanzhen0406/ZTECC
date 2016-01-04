@@ -1,0 +1,215 @@
+﻿html, body {
+    min-height: 600px;
+    height: 100%;
+}
+
+[data-role="main"] {
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+.toTop {
+    display: none;
+}
+
+#InLoginArea {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.Inlogin_top {
+    width: 1000px;
+    height: 80px;
+    top: 30px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.Inlogin_center {
+    width: 1000px;
+    top: 100px;
+    bottom: 70px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.Inlogin_bottom {
+    width: 1000px;
+    height: 60px;
+    bottom: 15px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+    .Inlogin_bottom img {
+        width: 100%;
+    }
+
+#Inlogin_topImg {
+    height: 100%;
+    position: absolute;
+}
+
+#ILwelcome {
+    font-size: 30px;
+    color: #9C9A9B;
+    line-height: 60px;
+    left: 280px;
+    padding-left: 30px;
+    margin: 10px;
+    border-left: 2px solid #9C9A9B;
+    float: left;
+    position: absolute;
+}
+
+.InLogin_LRarea {
+    height: 300px;
+    width: 497px;
+    background: white;
+    top: 50%;
+    margin-top: -180px;
+    border: 2px solid #1E5DAA;
+    position: absolute;
+}
+
+.center_right {
+    left: 501px;
+}
+
+.InLogin_LRarea.center_right {
+    border-left-style: none;
+}
+
+.Limg {
+    height: 300px;
+    min-width: 100%;
+}
+
+#LoginBox {
+    margin: 20px;
+}
+
+.Linput {
+    width: 320px;
+    position: relative;
+    border: 1px solid #EFEFEF;
+    margin: 0px auto;
+}
+
+.textSy {
+    height: 25px;
+    line-height: 25px;
+    color: #AEAEAE;
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 320px;
+}
+
+.errorMsg span.red {
+    font-weight: normal;
+}
+
+.iconSy {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 1000;
+    font-size: 18pt;
+    color: #9C9A9B;
+    right: 0px;
+    position: absolute;
+}
+
+.inputSy {
+    height: 40px;
+    width: 265px;
+    line-height: 40px;
+    font-size: 12pt;
+    padding-left: 13px;
+    background: white;
+    box-sizing: border-box;
+    border-style: none;
+    outline: none;
+}
+
+[for="ILradio"] {
+    color: #AEAEAE;
+}
+
+.Lbutton {
+    width: 320px;
+    background-color: #1E5DAA;
+    margin: 0 auto;
+}
+
+.inputBotton {
+    height: 40px;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.errorMsg {
+    text-align: right;
+    width: 215px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 15px;
+    display: inline-block;
+    color: red;
+    float: right;
+    font-weight: normal;
+}
+
+.login-verify input {
+    width: 140px;
+}
+
+.login-verify img, .login-verify span {
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.login-verify span {
+    width: 110px;
+}
+
+.login-verify span {
+    background-color: #CCCCCC;
+    text-align: center;
+    font-size: 14px;
+    *margin-top: -3px;
+}
+
+/*
+    页脚*/
+.footer-link {
+    height: 50px;
+    left: 42%;
+    position: absolute;
+    margin-left: -400px;
+    width: 950px;
+    z-index: 9999;
+}
+
+    .footer-link > * {
+        height: 95%;
+        display: inline-block;
+        width: 100px;
+        float: left;
+    }
+
+    .footer-link > .empty {
+        width: 230px;
+    }

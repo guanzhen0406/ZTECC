@@ -1,0 +1,11 @@
+﻿@{
+    Layout = "~/Views/Layout/_LayoutBasic.cshtml";
+}
+@section ScriptsAndStyles{
+    @RenderSection("ScriptsAndStyles")
+}
+
+@section LogoContent{
+    <div id="ILwelcome">欢迎登录</div>
+}
+@RenderBody()

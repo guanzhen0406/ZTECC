@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "菜单--二级菜单";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_iframe.css" />
+    <script type="text/javascript" src="~/Scripts/admin.js"></script>
+}
+
+<input type="hidden" id="ParentID" value="@ViewBag.ParentID"/>
+<div class="header">@ViewBag.Title<i class="icon-remove" data-close="bgWrapperOne"></i></div>
+<div style="height: 47px; background: white;">
+    <div class="dataOperation">
+        <input type="submit" class="doButton button" value="添加菜单"
+            data-wrapper-id="bgWrapperTwo" data-detail-link="/Sys_Menu/AddMenu/@ViewBag.ParentID" />
+    </div>
+</div>
+<div class="dataTableList">
+    <table id="childMenuListDataTbl" style="width: 100%;">
+        <thead>
+            <tr>
+                <th data-options="field:'Name',width:120,formatter:NameFormatter">菜单名称</th>
+                <th data-options="field:'ControllerName',width:160">控制器</th>
+                <th data-options="field:'ActionName',width:160">活动</th>
+                <th data-options="field:'IsFirstSecondMenu',width:80,formatter:IsFirstOrSecondMenuFormatter">是一二级菜单</th>
+                <th data-options="field:'Sort',width:50">排序</th>
+                <th data-options="field:'ModifyTime',width:180,formatter:DateTimeFormatter">操作时间</th>
+                <th data-options="field:'Operate',width:180,formatter:OperateFormatter">操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>

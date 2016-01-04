@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    @RenderSection("ScriptsAndStyles")
+    <link rel="stylesheet" type="text/css" href="~/Styles/inner_login.css" />
+}
+
+<div id="InLoginArea">
+    <div class="Inlogin_top">
+        <img id="Inlogin_topImg" src="~/Images/inner_login_top.png" />
+        @RenderSection("LogoContent")
+    </div>
+    @RenderBody()
+    <div class="Inlogin_bottom" style='background: url("about:blank") repeat scroll 0 0 transparent'>
+        <div class="footer-link" style='background: url("about:blank") repeat scroll 0 0 transparent'>
+            <div class="empty"></div>
+            <a href="http://www.huazhu.com/xiyue" target="_blank" title="禧玥酒店" style="width: 90px;"></a>
+            <a href="http://www.huazhu.com/manxin" target="_blank" title="漫心酒店" style="width: 110px;"></a>
+            <a href="http://www.huazhu.com/quanji" target="_blank" title="全季酒店"></a>
+            <a href="http://www.huazhu.com/event/xingcheng.aspx" target="_blank" title="星程酒店" style="width: 115px;"></a>
+            <a href="http://www.huazhu.com/kuaijie" target="_blank" title="汉庭酒店" style="width: 110px;"></a>
+            <a href="http://www.huazhu.com/yilai" target="_blank" title="怡莱酒店" style="width: 104px;"></a>
+            <a href="http://www.hiinns.com/" target="_blank" title="海友酒店" style="width: 90px;"></a>
+        </div>
+        <img src="~/Images/footer.png" />
+    </div>
+</div>

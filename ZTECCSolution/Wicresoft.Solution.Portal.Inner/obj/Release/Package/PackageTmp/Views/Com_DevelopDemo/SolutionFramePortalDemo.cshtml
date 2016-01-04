@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Portal";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+        <div class="dataTableList">
+            <table id="firstLevelListDataTbl" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th data-options="field:'Name',width:300">名称</th>
+                        <th data-options="field:'Type',width:300">类型</th>
+                        <th data-options="field:'Remarks',width:334">备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Common Images</td>
+                        <td>通用图片</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Common Javascript Files</td>
+                        <td>通用js</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Common Stylesheet Files</td>
+                        <td>通用css</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Wicresoft.Solution.Portal.BackBoneApp</td>
+                        <td>app站点</td>
+                        <td>微信html5</td>
+                    </tr>
+                    <tr>
+                        <td>Wicresoft.Solution.Portal.Inner</td>
+                        <td>pc站点</td>
+                        <td>对内站点</td>
+                    </tr>
+                    <tr>
+                        <td>Wicresoft.Solution.Portal.Outer</td>
+                        <td>pc站点</td>
+                        <td>对外站点</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>说明：</li>
+            <li><span style="color: red;">1.&nbsp;</span>App_Data，存放文件，优先执行</li>
+            <li><span style="color: red;">2.&nbsp;</span>App_Start，存放路由配置</li>
+            <li><span style="color: red;">3.&nbsp;</span>Controllers，存放mvc中的c</li>
+            <li><span style="color: red;">4.&nbsp;</span>DownloadFiles，存放模板或供下载的文件，实际部署可用虚拟目录</li>
+            <li><span style="color: red;">5.&nbsp;</span>FileUpload，存放上传文件，分模块日期存放，实际部署可用虚拟目录</li>
+            <li><span style="color: red;">6.&nbsp;</span>Images，存放图片文件</li>
+            <li><span style="color: red;">7.&nbsp;</span>Scripts，存放js</li>
+            <li><span style="color: red;">8.&nbsp;</span>Styles，存放css等</li>
+            <li><span style="color: red;">9.&nbsp;</span>Views，存放mvc中的v</li>
+            <li><span style="color: red;">10.&nbsp;</span>Global.asax，全局设置，统一错误捕捉机制</li>
+            <li><span style="color: red;">11.&nbsp;</span>Web.config，项目配置文件</li>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>Portal中站点采用mvc，通过ServiceBridge封装HTTP请求访问PortalAPI服务器请求数据</li>
+            <li><span style="color: red;">2.&nbsp;</span>Portal中使用的model均为自定义model，entity名称+'_Model'，在Model下的PortalModel中</li>
+            <li><span style="color: red;">3.&nbsp;</span>DataAccess中使用的model均为实体entity，在DataEntity下的Entity中，若为自定义实体，则在SelfEntity中</li>
+            <li><span style="color: red;">4.&nbsp;</span>Model和实体的转化在Business的BLL中进行,DAL中只能操作实体entity和自定义实体selfEntity，Controller、ServiceBridge和PortalAPI中只能使用PortalModel，BLL之外的实体复制可以使用Domain的MapperObject</li>
+            <li><span style="color: red;">5.&nbsp;</span>Model和实体的转化在Business的BLL中进行,必须在BLL的Core中的EntityMapping设置映射关系</li>
+            <li><span style="color: red;">6.&nbsp;</span>PortalAPI依赖接口编程调用Business中接口IBLL实现BLL，必须在Domain下ControllerRegistry中注册，指定实现</li>
+        </ul>
+    </div>
+</div>

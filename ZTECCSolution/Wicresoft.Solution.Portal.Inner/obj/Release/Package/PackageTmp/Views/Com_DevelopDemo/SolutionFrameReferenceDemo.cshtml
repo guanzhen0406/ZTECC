@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Reference";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>外部dll，引用自第三方</li>
+            <li><span style="color: red;">2.&nbsp;</span>HuaZhu.K2.Entity、HuaZhu.K2.Contract，华住K2流程需要dll</li>
+            <li><span style="color: red;">3.&nbsp;</span>Quartz，Windows服务定时框架dll</li>
+            <li><span style="color: red;">4.&nbsp;</span>StructureMap，依赖注入，用来定义接口所需</li>
+        </ul>
+    </div>
+</div>

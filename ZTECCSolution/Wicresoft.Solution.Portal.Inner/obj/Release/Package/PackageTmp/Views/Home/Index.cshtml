@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "客服首页";
+    ViewBag.ActiveMenu = "个人中心";
+    ViewBag.ActiveSecondMenu = "客服首页";
+    Layout = "~/Views/Layout/_LayoutMain.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/inner_home_index.css" />
+    <style>
+        body {
+            height: auto;
+        }
+
+        .mtlList > li {
+            margin: 2px;
+            cursor: pointer;
+        }
+
+        .bgWrapper iframe {
+            width: 1010px;
+            margin-top: 7%;
+        }
+    </style>
+    <script type="text/javascript" src="~/Scripts/home.js"></script>
+    <script type="text/javascript" src="~/Scripts/admin.js"></script>
+}
+
+<div style="text-align: center">欢迎!</div>

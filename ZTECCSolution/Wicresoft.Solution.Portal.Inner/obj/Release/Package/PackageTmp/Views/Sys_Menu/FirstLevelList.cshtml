@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "菜单管理";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/admin.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div style="height: 47px; background: white;">
+        <div class="dataOperation">
+            @if (ViewBag.AddPermission)
+            {
+                <input type="button" class="doButton button" value="添加菜单"
+                    data-wrapper-id="bgWrapperTwo" data-detail-link="/Sys_Menu/AddMenu/-1" />
+            }
+            @if (ViewBag.SetCommonMenuPermission)
+            {
+                <input type="button" class="doButton button" value="设置公共菜单" data-wrapper-id="bgWrapperTwo" data-detail-link="/Sys_Menu/SetCommonMenuForAll" style="width: 130px;" />
+            }
+        </div>
+    </div>
+    <div class="dataTableList">
+        <table id="firstLevelListDataTbl" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th data-options="field:'Name',width:120,formatter:NameFormatter">菜单名称</th>
+                    <th data-options="field:'ICO',width:180">图标样式</th>
+                    <th data-options="field:'IsFirstSecondMenu',width:100,formatter:IsFirstOrSecondMenuFormatter">是一二级菜单</th>
+                    <th data-options="field:'Sort',width:80">排序</th>
+                    <th data-options="field:'ModifyTime',width:200,formatter:DateTimeFormatter">操作时间</th>
+                    <th data-options="field:'Operate',width:220,formatter:OperateFormatter">操作</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>

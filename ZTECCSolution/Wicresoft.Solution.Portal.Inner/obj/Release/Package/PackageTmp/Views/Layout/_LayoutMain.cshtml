@@ -1,0 +1,67 @@
+﻿@using Wicresoft.Solution.Portal.Inner.Controllers
+@{
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+    //0 所有菜单和一级菜单
+    var menuList = new BaseController().CurrentUserKaopingMenuList.Where(p => p.IsFirstSecondMenu == true).ToList();
+    var firstMenuList = menuList.FindAll(p => p.ParentID == -1).OrderBy(p => p.Sort).ToList();
+}
+@section ScriptsAndStyles{
+    @RenderSection("ScriptsAndStyles")
+    <style type="text/css">
+        [data-role="footer"] img {
+            width: 300px;
+            margin-left: -100px;
+        }
+    </style>
+}
+
+<div data-role="header">
+    <img src="~/Images/header-logo.png" style="height: 80px; float: left;width: 228px;" />
+    <ul data-role="menu">
+        @foreach (var firstMenu in firstMenuList)
+        {
+            var secondList = menuList.FindAll(p => p.ParentID == firstMenu.ID).OrderBy(p => p.Sort).ToList();
+            <li class="@(ViewBag.ActiveMenu == firstMenu.Name ? "active" : "")">
+                <a href="#">
+                    <div class="@firstMenu.ICO"></div>
+                    <div>@firstMenu.Name</div>
+                </a>
+                <ul data-role="subMenu">
+                    @foreach (var secondMenu in secondList)
+                    {
+                        var url = "/" + secondMenu.ControllerName + "/" + secondMenu.ActionName;
+                        <li class="@(ViewBag.ActiveSecondMenu == secondMenu.Name ? "active" : "")"><a href="@url" >@secondMenu.Name</a></li>
+                    }
+                </ul>
+            </li>     
+        }
+    </ul>
+    <div class="right-logo">
+        <span class="loginSpan">欢迎：<span>@ViewBag.CurrentEmployeeName</span></span>
+        <form method="post" action="/Sys_User/Logout">
+            <input type="submit" class="button_lgout" value="[退出]" />
+        </form>
+    </div>
+</div>
+<div data-role="body">
+    @RenderBody()
+    <!--一级弹出页面-->
+    <div class="bgWrapper" id="bgWrapperOne" data-role="dialog-page">
+        <iframe src="" id="iframebgWrapperOne"></iframe>
+    </div>
+    <!--二级弹出页面-->
+    <div class="bgWrapper" id="bgWrapperTwo" data-role="dialog-page">
+        <iframe src="" id="iframebgWrapperTwo"></iframe>
+    </div>
+    <!--三级弹出页面-->
+    <div class="bgWrapper" id="bgWrapperThree" data-role="dialog-page">
+        <iframe src="" id="iframebgWrapperThree"></iframe>
+    </div>
+    <!--四级弹出页面-->
+    <div class="bgWrapper" id="bgWrapperFour" data-role="dialog-page">
+        <iframe src="" id="iframebgWrapperFour"></iframe>
+    </div>
+    <div data-role="footer">
+        @* <img src="~/Images/footer.png" />*@
+    </div>
+</div>

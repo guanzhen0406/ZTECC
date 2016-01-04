@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "角色--添加用户";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_iframe.css" />
+    <script type="text/javascript" src="~/Scripts/admin.js"></script>
+}
+
+<input type="hidden" value="@ViewBag.groupId" id="groupId"/>
+<div class="header">@ViewBag.Title<i class="icon-remove" data-close="bgWrapperTwo"></i></div>
+<div style="height: 47px; background: white;">
+    <div class="dataOperation">
+        <span class="doText">关键字：</span>
+        <input type="text" class="doinput" style="height: 33px; margin-top: -3px; width: 600px;" placeholder="请输入搜索内容" id="KeyWord">
+        <input type="button" class="doButton button" value="搜索" id="searchList">
+    </div>
+</div>
+<div class="dataTableList">
+    <table id="addOtherUserPermissionListDataTbl" style="width: 100%">
+        <thead>
+            <tr>
+                <th data-options="field:'ck',checkbox:true,width:2"></th>
+                <th data-options="field:'ADAccount',width:20">AD账号</th>
+                <th data-options="field:'ChineseName',width:20">中文名</th>
+                <th data-options="field:'EmployeeNo',width:20">员工号</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="operate">
+    <input type="button" class="button searchButton" value="保存" onclick="AutoSubmitData();">
+</div>

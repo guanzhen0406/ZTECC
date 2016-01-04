@@ -1,0 +1,82 @@
+.jeas-icon-empty {
+    height:0;
+}
+.jeas-icon-blank{
+	background:url('icons/blank.gif') no-repeat center center;
+}
+.jeas-icon-add{
+	background:url('icons/edit_add.png') no-repeat center center;
+}
+.jeas-icon-edit{
+	background:url('icons/pencil.png') no-repeat center center;
+}
+.jeas-icon-remove{
+	background:url('icons/edit_remove.png') no-repeat center center;
+}
+.jeas-icon-save{
+	background:url('icons/filesave.png') no-repeat center center;
+}
+.jeas-icon-cut{
+	background:url('icons/cut.png') no-repeat center center;
+}
+.jeas-icon-ok{
+	background:url('icons/ok.png') no-repeat center center;
+}
+.jeas-icon-no{
+	background:url('icons/no.png') no-repeat center center;
+}
+.jeas-icon-cancel{
+	background:url('icons/cancel.png') no-repeat center center;
+}
+.jeas-icon-reload{
+	background:url('icons/reload.png') no-repeat center center;
+}
+.jeas-icon-search{
+	background:url('icons/search.png') no-repeat center center;
+}
+.jeas-icon-print{
+	background:url('icons/print.png') no-repeat center center;
+}
+.jeas-icon-help{
+	background:url('icons/help.png') no-repeat center center;
+}
+.jeas-icon-undo{
+	background:url('icons/undo.png') no-repeat center center;
+}
+.jeas-icon-redo{
+	background:url('icons/redo.png') no-repeat center center;
+}
+.jeas-icon-back{
+	background:url('icons/back.png') no-repeat center center;
+}
+.jeas-icon-sum{
+	background:url('icons/sum.png') no-repeat center center;
+}
+.jeas-icon-tip{
+	background:url('icons/tip.png') no-repeat center center;
+}
+.jeas-icon-applicatoin{
+	background:url('icons/applicatoin.png') no-repeat center center;
+}
+
+.jeas-icon-critical{
+	background:url('icons/critical.png') no-repeat center center;
+}
+.jeas-icon-warn{
+	background:url('icons/warn.png') no-repeat center center;
+}
+.jeas-icon-normal{
+	background:url('icons/normal.png') no-repeat center center;
+}
+
+
+
+.jeas-icon-mini-add{
+	background:url('icons/mini_add.png') no-repeat center center;
+}
+.jeas-icon-mini-edit{
+	background:url('icons/mini_edit.png') no-repeat center center;
+}
+.jeas-icon-mini-refresh{
+	background:url('icons/mini_refresh.png') no-repeat center center;
+}

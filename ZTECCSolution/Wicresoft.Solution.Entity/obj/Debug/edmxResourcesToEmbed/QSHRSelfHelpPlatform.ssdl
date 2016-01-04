@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QSHRSelfHelpPlatformModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="QSHRSelfHelpPlatformModelStoreContainer">
+    <EntitySet Name="Com_UploadFile" EntityType="QSHRSelfHelpPlatformModel.Store.Com_UploadFile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Group" EntityType="QSHRSelfHelpPlatformModel.Store.Sys_Group" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_GroupDataPermission" EntityType="QSHRSelfHelpPlatformModel.Store.Sys_GroupDataPermission" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_GroupUser" EntityType="QSHRSelfHelpPlatformModel.Store.Sys_GroupUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Log" EntityType="QSHRSelfHelpPlatformModel.Store.Sys_Log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Menu" EntityType="QSHRSelfHelpPlatformModel.Store.Sys_Menu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Role" EntityType="QSHRSelfHelpPlatformModel.Store.Sys_Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_RoleMenuPermission" EntityType="QSHRSelfHelpPlatformModel.Store.Sys_RoleMenuPermission" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_RoleUser" EntityType="QSHRSelfHelpPlatformModel.Store.Sys_RoleUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_User" EntityType="QSHRSelfHelpPlatformModel.Store.Sys_User" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Com_UploadFile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FileType" Type="nvarchar" MaxLength="64" />
+    <Property Name="NewFileName" Type="nvarchar" MaxLength="256" />
+    <Property Name="OldFileName" Type="nvarchar" MaxLength="256" />
+    <Property Name="FilePath" Type="nvarchar" MaxLength="512" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="256" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="64" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Sys_Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+    <Property Name="GroupType" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="64" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="ModifyBy" Type="nvarchar" MaxLength="64" />
+    <Property Name="ModifyTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Sys_GroupDataPermission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="HotelUnifyNo" Type="nvarchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="Sys_GroupUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="ADAccount" Type="nvarchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="Sys_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Logger" Type="nvarchar" MaxLength="50" />
+    <Property Name="Level" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Stacktrace" Type="nvarchar(max)" />
+    <Property Name="Host" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Url" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Sys_Menu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="64" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="ControllerName" Type="nvarchar" MaxLength="64" />
+    <Property Name="ActionName" Type="nvarchar" MaxLength="64" />
+    <Property Name="ICO" Type="nvarchar" MaxLength="64" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="IsFirstSecondMenu" Type="bit" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="64" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="ModifyBy" Type="nvarchar" MaxLength="64" />
+    <Property Name="ModifyTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Sys_Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="64" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="ModifyBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Sys_RoleMenuPermission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="MenuID" Type="int" />
+    <Property Name="IsSelected" Type="int" />
+    <Property Name="IsCommonMenu" Type="int" />
+  </EntityType>
+  <EntityType Name="Sys_RoleUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="ADAccount" Type="nvarchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="Sys_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeNo" Type="nvarchar" MaxLength="64" />
+    <Property Name="ChineseName" Type="nvarchar" MaxLength="64" />
+    <Property Name="EnglishName" Type="nvarchar" MaxLength="64" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="64" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="64" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="CompanyEmail" Type="nvarchar" MaxLength="64" />
+    <Property Name="IDNumber" Type="nvarchar" MaxLength="64" />
+    <Property Name="MobileNum" Type="nvarchar" MaxLength="30" />
+    <Property Name="Status" Type="nvarchar" MaxLength="64" />
+    <Property Name="BirthDay" Type="datetime" />
+    <Property Name="DeptShortName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ResponsibleId" Type="int" />
+    <Property Name="SuperiorCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="CostCenter" Type="nvarchar" MaxLength="64" />
+    <Property Name="EmpType" Type="nvarchar" MaxLength="64" />
+    <Property Name="Careerband" Type="nvarchar" MaxLength="64" />
+    <Property Name="PositionNo" Type="nvarchar" MaxLength="64" />
+    <Property Name="Position" Type="nvarchar" MaxLength="255" />
+    <Property Name="PositionLevel" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReportTo" Type="int" />
+    <Property Name="ReportToName" Type="nvarchar" MaxLength="64" />
+    <Property Name="DptNo" Type="nvarchar" MaxLength="64" />
+    <Property Name="ADAccount" Type="nvarchar" MaxLength="64" />
+    <Property Name="Password" Type="nvarchar" MaxLength="256" />
+    <Property Name="JoinGroupDate" Type="datetime" />
+    <Property Name="SuperiorId" Type="int" />
+    <Property Name="StructureId" Type="int" />
+    <Property Name="EntryProperty" Type="int" />
+    <Property Name="SyncOn" Type="datetime" />
+    <Property Name="IsOverDirector" Type="int" />
+  </EntityType>
+</Schema>

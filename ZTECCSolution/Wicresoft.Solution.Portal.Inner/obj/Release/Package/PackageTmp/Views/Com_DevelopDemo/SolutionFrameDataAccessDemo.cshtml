@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "DataAccess";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>DataAccess中使用的model均为实体entity，在DataEntity下的Entity中，若为自定义实体，则在SelfEntity中</li>
+            <li><span style="color: red;">2.&nbsp;</span>Model和实体的转化在Business的BLL中进行,DAL中只能操作实体entity和自定义实体selfEntity，Controller、ServiceBridge和PortalAPI中只能使用PortalModel，BLL之外的实体复制可以使用Domain的MapperObject</li>
+            <li><span style="color: red;">3.&nbsp;</span>Model和实体的转化在Business的BLL中进行,必须在BLL的Core中的EntityMapping设置映射关系</li>
+            <li><span style="color: red;">4.&nbsp;</span>DalRepositories.tt，利用T4模板，自动根据实体生成对应的实现BaseRepository的部分类基类</li>
+            <li><span style="color: red;">5.&nbsp;</span>BulkExtensions，批量插入大数据，高效率</li>
+            <li><span style="color: red;">6.&nbsp;</span>若需要在DAL中添加方法，则可以定义同名部分类，编译时会合并编译</li>
+            <li><span style="color: red;">7.&nbsp;</span>RepositoryBase，DAL通用方法</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,218 @@
+﻿body {
+    height: auto;
+}
+
+.container {
+    background-color: #FFF;
+}
+
+    .container h3, .container p {
+        letter-spacing: 1px;
+    }
+
+
+.article {
+}
+
+    .article .article-wrap {
+        padding: 10px 0 0 50px;
+        font-size: 14px;
+        line-height: 2em;
+        color: #000;
+    }
+
+    .article .article-inc {
+        margin-top: 60px;
+        min-height: 360px;
+        padding: 10px 50px;
+        font-size: 14px;
+        line-height: 2em;
+        color: #000;
+    }
+
+
+
+.article-inc .inc-title h3 {
+    height: 32px;
+    line-height: 24px;
+    font-size: 16px;
+    color: orange;
+    font-weight: bold;
+    text-align: center;
+    width: 650px;
+    margin: 0px auto;
+}
+
+
+/* 流程选项  */
+
+.article-wrap .list1 {
+    border-top-color: orange;
+    border-top-style: solid;
+    width: 80px;
+    position: relative;
+    margin: 0 5px 0 25px;
+}
+
+
+
+.article-wrap ul, .article-wrap li {
+    display: inline-block;
+}
+
+.article-wrap .wrap-text {
+    padding-top: 55px;
+    margin-left: -20px;
+}
+/* 流程树 */
+
+
+.inc-desc {
+    border: 1px solid #ccc;
+    background: none repeat scroll 0% 0% #EEE;
+    padding: 10px;
+}
+
+.inc-process {
+    margin-left: 20%;
+    width: 500px;
+}
+
+.spine {
+    display: inline-block;
+    width: 80px;
+}
+
+.bulle {
+    display: inline-block;
+}
+
+
+.no1, .no2, .no3, .no4, .no5, .no6, .no7, .no8 {
+    border-left: 3px solid orange;
+    padding: 0px 20px;
+    margin: 32px 0px;
+    position: relative;
+}
+
+.article-inc .spine-text {
+    left: -18px;
+    position: absolute;
+    top: -30px;
+    padding-left: 40px;
+    line-height: 28px;
+}
+
+.spine-plus {
+    background: url("../Images/openProcess-icon.png") no-repeat;
+    background-position: -5px -5px;
+    padding-left: 40px;
+    padding-top: 30px;
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+}
+
+.article-wrap .spine-plus {
+    /*margin-left:-7px;*/
+    margin-left: 0px;
+    padding-top: 10px;
+    height: 20px;
+}
+
+.arrow {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0px 0px 0px 15px;
+}
+
+    .arrow .arrow-border {
+        border-color: transparent transparent #CCC;
+    }
+
+    .arrow .arrow-content {
+        border-color: transparent transparent #EEE;
+        position: absolute;
+        top: 1px;
+    }
+
+    .arrow .arrow-border, .arrow .arrow-content {
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+        border-width: 10px;
+        border-style: dashed dashed solid;
+    }
+
+.main {
+    width: 500px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+    .main .content {
+        padding: 10px;
+        position: relative;
+        background-color: #EEE;
+    }
+
+        .main .content p {
+            text-indent: 2em;
+        }
+
+
+/* 流程图 */
+
+
+/* 开工申请 */
+.round {
+    color: orange;
+}
+
+.container .section {
+    display: none;
+}
+
+    .container .section.active {
+        display: block;
+    }
+
+.container .article-wrap li.active .spine-plus {
+    background-position: -45px -5px;
+}
+
+.container .article-wrap li.active .list1 {
+    border-color: #73e437;
+}
+
+
+/* IE7兼容修改 */
+.container .article-wrap ul {
+    padding-left: 10px;
+}
+
+.container .article-wrap li {
+    float: left;
+    width: 120px;
+}
+
+.article-wrap .spine-text {
+    position: absolute;
+    margin-top: 25px;
+    line-height: 28px;
+}
+
+.article-wrap .list1 { /*margin-top:40px;*/
+    margin-top: 40px;
+    position: absolute;
+    margin-left: 35px;
+}
+
+.article-wrap .list2 {
+    border-top-color: orange;
+    border-top-style: solid;
+    width: 80px;
+    position: absolute;
+    margin: 40px 5px 0 25px;
+    display: none;
+}

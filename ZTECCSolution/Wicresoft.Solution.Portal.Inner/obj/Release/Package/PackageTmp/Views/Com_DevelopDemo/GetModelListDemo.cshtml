@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "数据列表";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="dataTableList">
+        <table id="firstLevelListDataTbl" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th data-options="field:'Name',width:60">菜单名称</th>
+                    <th data-options="field:'ICO',width:80">图标样式</th>
+                    <th data-options="field:'Sort',width:30">排序</th>
+                    <th data-options="field:'ModifyTime',width:80,formatter:DateTimeFormatter">操作时间</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div style="margin-left: 10px;">
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>registerDatGrid，通用注册，table必须带有id</li>
+            <li><span style="color: red;">2.&nbsp;</span>registerDatagridOfFirstLevelList，本页面表格注册</li>
+            <li><span style="color: red;">3.&nbsp;</span>developDemo.js中搜索表格id‘firstLevelListDataTbl’</li>
+            <li><span style="color: red;">4.&nbsp;</span>异步加载获取表格数据</li>
+            <li><span style="color: red;">5.&nbsp;</span>数据格式化及初始化链接，见后示例--数据格式化</li>
+            <li><span style="color: red;">6.&nbsp;</span>写上表头，用field:'...'告知表头，每一列在Model中对应的字段名</li>
+            <li><span style="color: red;">7.&nbsp;</span>Portal数据接口保证接收int page, int rows, string sort, string order四个参数，保证返回{ rows = data.ModelList, total = data.RecordTotal }</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "单文件上传";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <style>
+        .upArea {
+            padding-left: 20px;
+            width: 96%;
+        }
+
+        .upTypeText {
+            width: 185px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .button {
+            width: 120px;
+            line-height: 31px;
+            height: 35px;
+            margin-left: auto;
+        }
+
+        .downlosdTypeLim {
+            width: 360px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            line-height: 50px;
+            vertical-align: middle;
+        }
+
+            .downlosdTypeLim a {
+                text-decoration: underline;
+                color: blue;
+            }
+
+        .alink {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            line-height: 50px;
+            vertical-align: middle;
+            text-decoration: underline;
+            color: blue;
+            margin-right: 20px;
+            width: 160px;
+        }
+    </style>
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<input type="hidden" value="@ViewBag.fileType" id="fileType" />
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="upArea">
+        <div>
+            <div class="upTypeText"><span style="color: red;">*</span>附件示例一：</div>
+            <div id="file_up1" style="display: inline-block; width: 520px;">
+                <div id="fileUpload" style="display: inline-block; vertical-align: middle; width: 485px;">
+                    <div class="downlosdTypeLim"><span style='color: red;'>*</span>支持10M以下文件,xls,xlsx格式</div>
+                    <input type="hidden" id="attachmentPath" name="attachmentPath" />
+                    <input type="file" id="up1" class="searchButton button" name="up1" data-filetype="*.xlsx;*.xls;" />
+                    <input type="hidden" id="uploadFileId" name="uploadFileId" value="@Guid.NewGuid()"/>
+                </div>
+                <div id="fileList" style="display: none; vertical-align: middle; width: 485px;" class="fileList">
+                    <div class="downlosdTypeLim"><a href="#">文件名</a></div>
+                    <input type="button" class="searchButton button  deleteFileListCommon" value="删除" />
+                </div>
+            </div>
+            <a class="alink" href="/Com_UploadFile/ExportFileToResponse?saveName=@(HttpUtility.UrlEncode("/DownloadFiles/风险提示-1内控主管经理.xlsx"))" target="_blank">内控主管经理模板下载</a>
+        </div>
+    </div>
+    <div style="margin-left: 10px;">
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>jquery.uploadify，通用注册，utility.js中搜索'通用文件上传示例'</li>
+            <li><span style="color: red;">2.&nbsp;</span>id="fileUpload"：表示上传,看不见按钮必须先装Flash播放器</li>
+            <li><span style="color: red;">3.&nbsp;</span>id="fileList"：表示上传成功之后的文件列表，包含删除按钮(id="deleteFileListCommon")</li>
+            <li><span style="color: red;">4.&nbsp;</span>id="attachmentPath"：在文件上传成功之后，返回文件的相对路径，供表单提交使用</li>
+            <li><span style="color: red;">5.&nbsp;</span>'uploadSuccessCallback'，成功之后先执行默认回调函数,utility.js中搜索'uploadSuccessCallback'</li>
+            <li><span style="color: red;">6.&nbsp;</span>若需要重写自定义回调函数，developDemo.js中搜索'文件上传--回调重写'</li>
+            <li><span style="color: red;">7.&nbsp;</span>上传每个按钮必须给予不同的guid，作为附件的主键，可复用，上传若该guid文件对应的附件表中有记录，会删除原有记录，删除原有记录对应的上传文件</li>
+            <li><span style="color: red;">8.&nbsp;</span>使用guid作为附件主键，刷新页面guid会变化，不刷新则可复用，保证上下五百年不重复</li>
+            <li><span style="color: red;">9.&nbsp;</span>附件存储在表'Com_UploadFile'中，业务表中只需要存储附件的主键即可，需要附件详情信息时连接查询</li>
+            <li><span style="color: red;">10.&nbsp;</span>附件上传过程中文件重命名，解决链接编码化和路径过长限制问题，原文件名存储在表中</li>
+            <li><span style="color: red;">11.&nbsp;</span>附件存储规则，分模块分日期存储，具体见'Com_UploadFileController'下'UploadFileAction'</li>
+            <li><span style="color: red;">12.&nbsp;</span>附件通用下载，具体见'Com_UploadFileController'下'ExportFileToResponse'</li>
+            <li><span style="color: red;">13.&nbsp;</span>附件删除，具体见'Com_UploadFileController'下'DeleteFile'</li>
+            <li><span style="color: red;">14.&nbsp;</span>超链接需要编码化，utility.js中搜索'uploadSuccessCallback'</li>
+        </ul>
+    </div>
+</div>

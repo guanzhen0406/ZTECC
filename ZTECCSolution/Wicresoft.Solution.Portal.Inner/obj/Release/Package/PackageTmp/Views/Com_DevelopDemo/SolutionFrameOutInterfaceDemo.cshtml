@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "OutInterface";
+    Layout = "~/Views/Layout/_LayoutEmpty.cshtml";
+}
+
+@section ScriptsAndStyles{
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/KP_special.css" />
+    <script type="text/javascript" src="~/Scripts/developDemo.js"></script>
+}
+
+<div class="layout_top">
+    <div class="header">@ViewBag.Title</div>
+</div>
+<div class="layout_bottom">
+    <div class="operate" style="margin-left: 10px;">
+    </div>
+    <div style="margin-left: 10px;">
+        <br />
+        <ul>
+            <li><span style="color: red;">*</span>备注：</li>
+            <li><span style="color: red;">1.&nbsp;</span>提供给外部调用接口，或Windows服务定制等扩展</li>
+            <li><span style="color: red;">2.&nbsp;</span>WcfService，提供给外部调用的接口，比如给K2流程的回调</li>
+            <li><span style="color: red;">3.&nbsp;</span>WindowsService，利用quartz定时框架跑windows服务</li>
+            <li><span style="color: red;">4.&nbsp;</span>WindowsServiceTask，quartz定时定制任务</li>
+        </ul>
+    </div>
+</div>
